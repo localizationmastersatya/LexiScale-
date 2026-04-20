@@ -1,0 +1,3169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LexiScale | Multi-market localization studio</title>
+
+  <!-- ── SEO ─────────────────────────────────────────── -->
+  <meta name="description" content="LexiScale is a multi-market localization studio offering website, app, eLearning, game and document localization in 125+ languages. Fixed scope. 24h response. NDA-protected.">
+  <meta name="keywords" content="localization, translation, eLearning localization, game localization, website localization, multilingual, MTPE, LQA, SCORM, 125 languages">
+  <meta name="author" content="LexiScale">
+  <link rel="canonical" href="https://www.lexiscale.com/">
+
+  <!-- ── Open Graph (LinkedIn, Facebook, Slack previews) ── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.lexiscale.com/">
+  <meta property="og:title"       content="LexiScale | Multi-market localization studio">
+  <meta property="og:description" content="Website, app, eLearning, game and document localization in 125+ languages. Native linguists. 3-layer QA. NDA-protected. Fixed scope with 24h response.">
+  <meta property="og:image"       content="https://www.lexiscale.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"   content="LexiScale — Multi-market localization studio">
+  <meta property="og:site_name"   content="LexiScale">
+  <meta property="og:locale"      content="en_US">
+
+  <!-- ── Twitter / X Card ────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="LexiScale | Multi-market localization studio">
+  <meta name="twitter:description" content="125+ languages. Native linguists. eLearning, game, website and document localization — NDA-protected and QA-signed.">
+  <meta name="twitter:image"       content="https://www.lexiscale.com/og-image.png">
+
+  <!-- ── LinkedIn specific (article author) ──────────── -->
+  <meta property="article:author" content="https://www.linkedin.com/company/lexiscale">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  /* Corporate Professional Theme */
+  --paper: #f8fafc;
+  --paper-strong: #ffffff;
+  --sand: #e2e8f0;
+  --ink: #0f172a;
+  --ink-soft: #475569;
+  --night: #020617;
+  --night-soft: #0f172a;
+  --teal: #0ea5e9;
+  --teal-deep: #0284c7;
+  --amber: #3b82f6; 
+  --amber-soft: #93c5fd;
+  --rose: #6366f1;
+  --white: #ffffff;
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.2);
+  --glass: rgba(255, 255, 255, 0.85);
+  --shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.08);
+  --shadow-strong: 0 20px 60px -15px rgba(15, 23, 42, 0.15);
+  --radius-xl: 24px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --max-width: 1400px;
+  --scroll-progress: 0%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  overflow-x: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.is-mounted {
+  opacity: 1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.05), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.05), transparent 40%);
+  z-index: -1;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.progress-line {
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: var(--scroll-progress);
+  height: 4px;
+  background: linear-gradient(90deg, var(--amber), var(--rose));
+  z-index: 70;
+  transition: width 0.15s ease;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  padding: 16px 48px 0;
+  transition: transform 0.35s ease;
+}
+.site-header.nav-hidden {
+  transform: translateY(calc(-100% - 20px));
+}
+
+.site-nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-scale {
+  background: linear-gradient(135deg, var(--teal), var(--amber-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--teal), var(--rose));
+  color: var(--white);
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.25);
+}
+
+.brand-mark svg {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-links, .nav-actions, .mobile-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.is-active {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-cta, .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.nav-cta, .button-primary {
+  padding: 12px 24px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--teal), var(--rose));
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.nav-cta:hover, .button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.3);
+}
+
+.button {
+  min-height: 48px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.button-secondary {
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.button-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+}
+
+.lang-switcher { position: relative; }
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.lang-btn:hover { background: var(--sand); }
+.lang-btn .chevron { font-size: 0.75rem; color: var(--ink-soft); }
+
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 160px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow-strong);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lang-switcher.is-open .lang-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.lang-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.lang-option:hover { background: var(--sand); color: var(--ink); }
+.lang-option.is-active {
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--teal-deep);
+  font-weight: 700;
+}
+.lang-option.is-active::after {
+  content: "✓";
+  font-size: 0.85rem;
+  color: var(--teal-deep);
+}
+
+.lang-btn .chevron {
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  display: inline-block;
+  transition: transform 0.22s ease;
+}
+.lang-switcher.is-open .lang-btn .chevron { transform: rotate(180deg); }
+
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--paper-strong);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 4px auto;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  max-width: var(--max-width);
+  margin: 12px auto 0;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow-strong);
+}
+
+.mobile-menu.is-open { display: grid; gap: 24px; }
+.mobile-links { display: grid; gap: 16px; font-weight: 600; }
+.mobile-lang { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.page-hero { padding: 48px 48px 0; }
+.hero-shell { position: relative; max-width: var(--max-width); margin: 0 auto; }
+
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--night);
+}
+
+.hero-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(15, 23, 42, 0.7) 100%);
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  mix-blend-mode: luminosity;
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  min-height: 600px;
+  padding: 64px;
+  align-items: start;
+}
+
+.eyebrow, .section-kicker, .card-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  color: var(--amber-soft);
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.hero-copy { color: var(--white); max-width: 48rem; }
+
+.display {
+  margin: 24px 0;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.display .accent {
+  background: linear-gradient(135deg, var(--teal), var(--amber-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-copy p, .section-copy, .info-card p, .card p, .band p, .faq-item p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.section-copy + .section-copy { margin-top: 12px; }
+
+.hero-copy p { color: rgba(255, 255, 255, 0.85); }
+
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.metric {
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.metric strong { display: block; font-size: 2rem; font-weight: 800; line-height: 1; }
+.metric span { display: block; margin-top: 8px; color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; }
+
+.panel-stack { display: grid; gap: 24px; }
+
+.info-card {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+}
+
+.info-card h2, .info-card h3, .card h3, .section-title, .band h2 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.info-card h2 { margin-top: 16px; font-size: 1.75rem; line-height: 1.2; }
+
+.card-kicker {
+  color: var(--teal-deep);
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.card-kicker--light {
+  color: var(--amber-soft);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.language-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.language-chip {
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.orbit-card {
+  background: var(--night);
+  color: var(--white);
+  border: none;
+}
+
+.orbit-card h3 { color: var(--white); margin-top: 16px; font-size: 1.5rem; }
+
+.orbit-stat {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orbit-stat strong { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.orbit-stat span { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
+
+.section { padding: 80px 48px; }
+.section--tight { padding-top: 24px; }
+.section--tinted { background: #f1f5f9; }
+.section--dark { background: var(--night); }
+.section-shell { max-width: var(--max-width); margin: 0 auto; }
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 36px;
+}
+
+.section-head > div {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.section-head--stacked {
+  display: grid;
+  gap: 12px;
+  justify-content: start;
+}
+
+.section-kicker {
+  color: var(--teal-deep);
+  background: rgba(14, 165, 233, 0.1);
+}
+
+.section-title { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 0; }
+
+.marquee {
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--paper-strong);
+  border: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.story-grid, .video-feature, .contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.story-stack, .contact-side { display: grid; gap: 32px; }
+
+.card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.media-gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px; }
+.media-gallery-item { border-radius: var(--radius-md); overflow: hidden; min-height: 200px; background: var(--sand); }
+.media-gallery-item--wide { grid-column: span 2; min-height: 260px; }
+.media-gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: inherit; }
+
+.card-inner, .story-copy, .detail-card, .sector-card, .output-card, .faq-item, .side-card {
+  padding: 32px;
+}
+
+.check-list { display: grid; gap: 14px; margin-top: 20px; }
+.check-item { display: flex; align-items: flex-start; gap: 16px; }
+.check-item::before {
+  content: "✓";
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--teal-deep);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.check-item span { font-weight: 500; }
+
+.stack-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.sector-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.assurance-grid, .output-grid, .faq-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.detail-badge, .sector-index {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--teal-deep);
+  border: 1px solid var(--border);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.detail-card h3, .sector-card h3 { font-size: 1.25rem; margin-bottom: 12px; }
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.timeline-item {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--paper-strong);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.timeline-step {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--night);
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.note-grid { display: grid; gap: 24px; align-content: center; }
+.video-note {
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: var(--paper-strong);
+  border: 1px solid var(--border);
+}
+
+.email-card { background: var(--night); color: var(--white); border: none; }
+.email-card h2 { color: var(--white); }
+.email-card p { color: rgba(255, 255, 255, 0.7); }
+.email-link {
+  display: inline-flex;
+  margin-top: 24px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.contact-form {
+  background: var(--paper-strong);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow);
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { display: grid; gap: 8px; margin-bottom: 20px; }
+.form-group label { font-weight: 600; font-size: 0.9rem; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
+  background: var(--paper);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+  background: var(--white);
+}
+
+.form-group textarea { min-height: 140px; resize: vertical; }
+
+.form-submit {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--teal), var(--rose));
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.band {
+  margin-top: 64px;
+  padding: 64px;
+  border-radius: var(--radius-xl);
+  background: var(--night);
+  color: var(--white);
+  text-align: center;
+}
+.band h2 { color: var(--white); }
+.band p { margin: 16px auto 32px; max-width: 600px; color: rgba(255, 255, 255, 0.8); }
+.band-actions { display: flex; gap: 16px; justify-content: center; }
+
+.site-footer { padding: 80px 48px 48px; }
+.footer-shell {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 64px;
+  border-radius: var(--radius-xl);
+  background: var(--night);
+  color: var(--white);
+}
+
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; }
+.footer-copy { color: rgba(255, 255, 255, 0.7); margin-top: 24px; max-width: 400px; }
+.footer-heading { font-weight: 700; text-transform: uppercase; font-size: 0.85rem; color: rgba(255, 255, 255, 0.5); margin-bottom: 20px; }
+.footer-links { display: grid; gap: 12px; }
+.footer-links a { color: rgba(255, 255, 255, 0.8); }
+.footer-links a:hover { color: var(--teal); }
+
+.footer-bottom {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+/* ── New sections ─────────────────────────────── */
+/* ── Working Policy ──────────────────────────────── */
+.policy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.policy-card { padding: 36px 32px; border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--paper-strong); box-shadow: var(--shadow); }
+.policy-icon { width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(135deg,rgba(14,165,233,.12),rgba(99,102,241,.12)); border: 1px solid rgba(14,165,233,.2); display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 18px; }
+.policy-card h3 { font-size: 1.1rem; font-weight: 700; margin: 0 0 10px; }
+.policy-card p  { font-size: 0.92rem; line-height: 1.65; color: var(--ink-soft); margin: 0 0 16px; }
+.policy-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.policy-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; }
+.policy-list li::before { content: "\2192"; color: var(--teal-deep); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.policy-highlight { margin-top: 32px; padding: 28px 32px; border-radius: var(--radius-lg); background: var(--night); color: var(--white); display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.policy-highlight p { font-size: 1rem; color: rgba(255,255,255,.75); margin: 0; line-height: 1.65; max-width: 600px; }
+.policy-highlight a { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; background: linear-gradient(135deg,var(--teal),var(--rose)); color: var(--white); font-weight: 700; font-size: 0.95rem; white-space: nowrap; flex-shrink: 0; text-decoration: none; }
+@media (max-width: 768px) { .policy-grid { grid-template-columns: 1fr; } }
+/* ─────────────────────────────────────────────────── */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.team-card {
+  padding: 28px 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.team-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(14,165,233,.12), rgba(99,102,241,.12));
+  border: 1px solid rgba(14,165,233,.2);
+  display: grid; place-items: center;
+  margin: 0 auto 16px;
+  font-size: 1.5rem;
+}
+.team-card h3 { font-size: 0.95rem; font-weight: 700; margin: 0 0 8px; color: var(--ink); }
+.team-card p  { font-size: 0.85rem; line-height: 1.55; color: var(--ink-soft); margin: 0; }
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  counter-reset: step;
+}
+.process-step {
+  position: relative;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+}
+.process-step::before {
+  content: counter(step, decimal-leading-zero);
+  counter-increment: step;
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: var(--teal-deep);
+  margin-bottom: 12px;
+  background: rgba(14,165,233,.1);
+  border: 1px solid rgba(14,165,233,.2);
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.process-step h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; }
+.process-step p  { font-size: 0.9rem; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+.process-step-tag {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.qa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.qa-card {
+  padding: 36px 32px;
+  border-radius: var(--radius-lg);
+  background: var(--paper-strong);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.qa-icon {
+  font-size: 2rem; margin-bottom: 16px;
+}
+.qa-card h3 { font-size: 1.15rem; font-weight: 700; margin: 0 0 10px; }
+.qa-card p  { font-size: 0.9rem; line-height: 1.65; color: var(--ink-soft); margin: 0 0 16px; }
+.qa-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.qa-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.88rem; color: var(--ink-soft); }
+.qa-list li::before { content:"✓"; color: var(--teal-deep); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+.security-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 0;
+}
+.security-card {
+  display: flex;
+  gap: 20px;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+}
+.security-icon {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: rgba(14,165,233,.15);
+  border: 1px solid rgba(14,165,233,.25);
+  display: grid; place-items: center;
+  font-size: 1.3rem;
+}
+.security-card h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin: 0 0 8px; }
+.security-card p  { font-size: 0.88rem; line-height: 1.6; color: rgba(255,255,255,.65); margin: 0; }
+
+/* ── Why LexiScale pillars ───────────────────── */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.pillar-card {
+  padding: 36px 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+}
+.pillar-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  display: block;
+}
+.pillar-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 10px; }
+.pillar-card p  { font-size: 0.9rem; line-height: 1.65; color: var(--ink-soft); margin: 0; }
+
+/* ── Trust bar ───────────────────────────────── */
+.trust-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 40px 48px;
+  border-radius: var(--radius-xl);
+  background: var(--paper-strong);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  margin-bottom: 0;
+}
+.trust-stat { text-align: center; }
+.trust-stat strong { display: block; font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em; color: var(--ink); line-height: 1; }
+.trust-stat span   { display: block; font-size: 0.85rem; color: var(--ink-soft); margin-top: 6px; font-weight: 500; }
+.trust-divider { width: 1px; height: 40px; background: var(--border); }
+
+/* ── FAQ accordion ───────────────────────────── */
+.faq-accordion { display: grid; gap: 12px; }
+.faq-accordion-item {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.faq-accordion-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.faq-accordion-q:hover { background: var(--paper); }
+.faq-chevron {
+  flex-shrink: 0;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  display: grid; place-items: center;
+  font-size: 0.7rem;
+  transition: transform 0.25s ease, background 0.2s ease;
+}
+.faq-accordion-item.is-open .faq-chevron {
+  transform: rotate(180deg);
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--white);
+}
+.faq-accordion-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-accordion-item.is-open .faq-accordion-a { max-height: 400px; }
+.faq-accordion-a p {
+  padding: 0 28px 20px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+@media (max-width: 1080px) { .pillar-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px)  { .pillar-grid { grid-template-columns: 1fr; } .trust-divider { display: none; } }
+/* ─────────────────────────────────────────────── */
+[data-tilt] { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.d-1 { transition-delay: 0.1s; }
+.d-2 { transition-delay: 0.2s; }
+.d-3 { transition-delay: 0.3s; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 1080px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-toggle { display: block; }
+  .hero-grid, .story-grid, .video-feature, .contact-layout, .footer-grid { grid-template-columns: 1fr; }
+  .stack-grid, .sector-grid, .assurance-grid, .output-grid, .faq-grid, .timeline { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .security-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 24px 0; }
+  .section--tinted, .section--dark { padding-bottom: 60px; }
+  .site-header { padding: 16px 24px 0; }
+  .page-hero { padding: 48px 24px 0; }
+  .site-footer { padding: 60px 24px 40px; }
+  .hero-grid { padding: 32px; }
+  .stack-grid, .sector-grid, .assurance-grid, .output-grid, .faq-grid, .timeline { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .process-steps, .qa-grid { grid-template-columns: 1fr; }
+  .band { padding: 40px 24px; }
+  .footer-shell { padding: 40px 24px; }
+}
+  </style>
+  <script>
+const translations = {
+  en: {
+    meta_home_title: "LexiScale | Multi-market localization studio",
+    meta_services_title: "LexiScale Services | Web, app, media, and document localization",
+    meta_industries_title: "LexiScale Industries | Localization for regulated and growth teams",
+    meta_contact_title: "LexiScale Contact | Request a localization quote",
+    nav_home: "Home",
+    nav_services: "Services",
+    nav_industries: "Industries",
+    nav_contact: "Contact",
+    nav_quote: "Request a Quote",
+    common_explore_services: "Explore Services",
+    common_contact_team: "Contact LexiScale",
+    common_plan_launch: "Plan Your Launch",
+    footer_tagline: "LexiScale shapes multilingual experiences for teams that need nuance, pace, and control.",
+    footer_quick_links: "Quick Links",
+    footer_service_label: "Focus Areas",
+    footer_service1: "Website localization",
+    footer_service2: "App localization",
+    footer_service3: "Documents and compliance",
+    footer_service4: "Media and learning",
+    footer_email_label: "Email",
+    footer_copy: "Built for borderless communication.",
+    home_eyebrow: "Localization for ambitious launches",
+    home_hero_title: "Make every market feel <span class='accent'>locally imagined.</span>",
+    home_hero_sub: "LexiScale helps brands adapt websites, apps, documents, learning content, and video so each audience receives something clear, culturally tuned, and confidently on-brand.",
+    home_hero_primary: "Request a Quote",
+    home_hero_secondary: "Explore Services",
+    home_metric1_label: "launch framework",
+    home_metric2_label: "review layers for critical copy",
+    home_metric3_label: "reply window for fresh enquiries",
+    home_panel_kicker: "Program Focus",
+    home_panel_title: "Brand voice, regional nuance, and the systems around them.",
+    home_panel_body: "We localize tone, layout, terminology, and customer journeys so market-ready launches feel designed from the start instead of added at the end.",
+    home_orbit_kicker: "Program Rhythm",
+    home_orbit_title: "Built for web, apps, documents, and media.",
+    home_orbit_label1: "Web",
+    home_orbit_label2: "Apps",
+    home_orbit_label3: "Media",
+    home_orbit_stat1: "Localized landing pages, product flows, and multilingual SEO planning.",
+    home_orbit_stat2: "String management, UI expansion checks, and linguistic QA.",
+    home_orbit_stat3: "Subtitles, voice adaptation, scripts, and training content.",
+    home_signal1: "Website localization",
+    home_signal2: "App globalization",
+    home_signal3: "Regulatory content",
+    home_signal4: "Video subtitling",
+    home_signal5: "Learning localization",
+    home_signal6: "Multilingual support",
+    home_story_kicker: "Designed for nuance",
+    home_story_title: "Localization that feels authored in-market, not post-processed.",
+    home_story_body1: "The strongest multilingual brands do more than translate text. They adapt rhythm, references, formatting, and user expectations until the experience reads naturally in each market.",
+    home_story_body2: "Our approach blends native-language review with practical production design, helping teams move fast without flattening their brand voice.",
+    home_story_item1: "Terminology systems shaped around your sector",
+    home_story_item2: "Native review before go-live and after UI implementation",
+    home_story_item3: "Creative adaptation for campaigns, learning, and multimedia",
+    home_preview_kicker: "Core Services",
+    home_preview_title: "The work streams most teams ask us to solve first.",
+    home_preview_sub: "Start with a focused launch or connect the whole program over time.",
+    svc_web_title: "Website Localization",
+    svc_web_desc: "Market-tuned messaging, navigation, and multilingual SEO for landing pages, product journeys, help centers, and ecommerce paths.",
+    svc_app_title: "App and Software Localization",
+    svc_app_desc: "String handling, UI expansion awareness, release-ready QA, and native-feeling product language across platforms.",
+    svc_doc_title: "Document and Regulatory Translation",
+    svc_doc_desc: "Clear, review-led delivery for business documents, contracts, SOPs, policies, training packs, and regulated content.",
+    svc_media_title: "Multimedia Transcreation",
+    svc_media_desc: "Subtitles, scripts, voice direction, on-screen copy, and creative adaptation for campaigns, explainers, and learning assets.",
+    svc_ai_title: "AI-Assisted MTPE",
+    svc_ai_desc: "Efficient high-volume workflows where machine output is refined by expert reviewers to restore tone, accuracy, and consistency.",
+    svc_interp_title: "Interpretation and Language Support",
+    svc_interp_desc: "Scheduled interpreting and multilingual support planning for meetings, onboarding, virtual sessions, and sensitive conversations.",
+    home_flow_kicker: "How We Work",
+    home_flow_title: "A clear workflow for multilingual projects with real deadlines.",
+    home_flow1_title: "Align",
+    home_flow1_desc: "We map target markets, risk points, and the content that drives conversion or compliance.",
+    home_flow2_title: "Adapt",
+    home_flow2_desc: "Copy, UI, visuals, and terminology are reworked for each audience, not just translated line by line.",
+    home_flow3_title: "Validate",
+    home_flow3_desc: "Review cycles check language quality, layout behavior, and market fit before release.",
+    home_flow4_title: "Release",
+    home_flow4_desc: "Final deliverables arrive structured for publishing, versioning, and future updates.",
+    home_band_title: "One partner for content, code, and culture.",
+    home_band_body: "From a single landing page to a multilingual release calendar, we build programs that stay elegant as volume grows.",
+    home_band_button: "Plan Your Launch",
+    services_stack_kicker: "What We Deliver",
+    services_stack_title: "Eight specialized service lines, one shared quality system.",
+    services_sub: "Choose a single workstream or combine them into one operating rhythm. We keep the experience cohesive from source content to final delivery.",
+    services_media_kicker: "Media Layer",
+    services_media_title: "Video, voice, and learning content deserve more than literal translation.",
+    services_media_body: "We adapt timing, subtitles, scripts, and visual language so multimedia still feels polished after it crosses borders.",
+    services_media_note1_title: "Subtitle pacing",
+    services_media_note1_desc: "Readable line length, natural timing, and context-aware phrasing for on-screen clarity.",
+    services_media_note2_title: "Voice and script adaptation",
+    services_media_note2_desc: "Dialogue and narration stay faithful to intent while sounding natural in the target language.",
+    services_media_note3_title: "Training localization",
+    services_media_note3_desc: "Modules, assessments, and learner support materials stay consistent across every rollout.",
+    industries_sector_kicker: "Where We Fit",
+    industries_sector_title: "Localization support for regulated, product-led, and customer-facing teams.",
+    industries_sub: "Different sectors ask for different levels of nuance. We shape the language process around your audience, approval logic, and publication pressure.",
+    sector1_title: "Life Sciences and Healthcare",
+    sector1_desc: "Patient-facing content, training materials, internal documentation, and precise terminology for sensitive communication.",
+    sector2_title: "Legal and Compliance",
+    sector2_desc: "Contracts, policies, disclosures, and review-heavy content that must stay clear under scrutiny.",
+    sector3_title: "Technology and SaaS",
+    sector3_desc: "Product interfaces, release notes, support content, onboarding journeys, and fast-moving roadmap updates.",
+    sector4_title: "Retail and Ecommerce",
+    sector4_desc: "Campaign messaging, product copy, merchandising language, and multilingual customer paths that protect conversion.",
+    sector5_title: "Learning and Training",
+    sector5_desc: "Courses, assessments, facilitator guides, and onboarding materials that still teach well after adaptation.",
+    sector6_title: "Customer Support and Operations",
+    sector6_desc: "Macros, knowledge bases, chat flows, escalation content, and internal guidance for multilingual service teams.",
+    industries_assurance_kicker: "Shared Standards",
+    industries_assurance_title: "What stays consistent across every sector.",
+    assure1_title: "Audience-aware tone",
+    assure1_desc: "Language choices reflect who is reading, what they need, and how much confidence the moment requires.",
+    assure2_title: "Structured review",
+    assure2_desc: "Nothing important relies on a single pass. Critical material gets layered checks before it moves forward.",
+    assure3_title: "Release readiness",
+    assure3_desc: "We look beyond wording to layout, readability, and publishable packaging so teams are not fixing issues at the last second.",
+    output1_title: "Rollout kits",
+    output1_desc: "Approved files, market notes, and practical guidance for publishing or internal handover.",
+    output2_title: "Review-ready drafts",
+    output2_desc: "Clear versions for legal, product, marketing, or regional stakeholders to sign off quickly.",
+    output3_title: "Future-proof assets",
+    output3_desc: "Content prepared so later updates do not force you to restart terminology and review from scratch.",
+    contact_eyebrow: "Contact LexiScale",
+    contact_title: "Tell us what you need, and we will shape the right multilingual path.",
+    contact_sub: "Use the form below for websites, apps, documents, media, or ongoing localization support. If email is easier, write directly and we will take it from there.",
+    contact_email_kicker: "Email First",
+    contact_email_title: "Prefer a direct message before you scope the project?",
+    contact_email_body: "Send your brief, timeline, or sample material by email. We can start with a lightweight conversation and turn it into a clearer plan.",
+    contact_side2_title: "Flexible project shapes",
+    contact_side2_desc: "Single assets, multilingual launches, ongoing review desks, or support for one phase of a larger program.",
+    contact_side3_title: "Clear next step",
+    contact_side3_desc: "Once we understand the scope, we can recommend the best starting point instead of pushing a one-size-fits-all package.",
+    faq_kicker: "Before You Send",
+    faq_title: "A few common questions.",
+    faq1_q: "What should I include in the brief?",
+    faq1_a: "Target languages, timelines, links, sample files, and any notes about audience or tone are enough to begin.",
+    faq2_q: "Can you help if the rollout is already in motion?",
+    faq2_a: "Yes. We can step into a live project, support one release cycle, or build a steadier workflow after the urgent phase.",
+    faq3_q: "Can multiple market versions stay aligned over time?",
+    faq3_a: "Yes. The workflow is built to keep parallel versions synchronized as content evolves and new updates arrive.",
+    form_fname: "First Name",
+    form_lname: "Last Name",
+    form_email: "Corporate Email",
+    form_service: "Primary Service Required",
+    form_opt_default: "Select an area of focus",
+    form_opt_1: "Certified Document Translation",
+    form_opt_2: "Strategic Web Localization",
+    form_opt_3: "Software / App Globalization",
+    form_opt_4: "Multimedia Transcreation",
+    form_opt_5: "AI-Augmented MTPE",
+    form_opt_6: "Executive Interpretation",
+    form_opt_7: "Custom Global Strategy",
+    form_scope: "Project Scope & Requirements",
+    form_submit: "Submit Project Details",
+    form_ph_first_name: "John",
+    form_ph_last_name: "Smith",
+    form_ph_email: "you@company.com",
+    form_ph_details: "Outline your target languages, estimated volume, and timeline"
+  },
+  fr: {
+    meta_home_title: "LexiScale | Studio de localisation multi-marches",
+    meta_services_title: "Services LexiScale | Localisation web, app, media et documents",
+    meta_industries_title: "Secteurs LexiScale | Localisation pour equipes reglementees et en croissance",
+    meta_contact_title: "Contact LexiScale | Demander un devis de localisation",
+    nav_home: "Accueil",
+    nav_services: "Services",
+    nav_industries: "Secteurs",
+    nav_contact: "Contact",
+    nav_quote: "Demander un devis",
+    common_explore_services: "Voir les services",
+    common_contact_team: "Contacter LexiScale",
+    common_plan_launch: "Planifier votre lancement",
+    footer_tagline: "LexiScale conçoit des experiences multilingues pour les equipes qui ont besoin de nuance, de rythme et de maitrise.",
+    footer_quick_links: "Liens rapides",
+    footer_service_label: "Domaines cles",
+    footer_service1: "Localisation de sites web",
+    footer_service2: "Localisation d'applications",
+    footer_service3: "Documents et conformite",
+    footer_service4: "Media et apprentissage",
+    footer_email_label: "E-mail",
+    footer_copy: "Concu pour une communication sans frontieres.",
+    home_eyebrow: "Localisation pour des lancements ambitieux",
+    home_hero_title: "Faites en sorte que chaque marche semble <span class='accent'>pense sur place.</span>",
+    home_hero_sub: "LexiScale aide les marques a adapter sites web, applications, documents, contenus de formation et video afin que chaque audience recoive une experience claire, culturelle et fidele a la marque.",
+    home_hero_primary: "Demander un devis",
+    home_hero_secondary: "Voir les services",
+    home_metric1_label: "cadre de lancement",
+    home_metric2_label: "niveaux de relecture pour les contenus critiques",
+    home_metric3_label: "delai de reponse pour les nouvelles demandes",
+    home_panel_kicker: "Cap du programme",
+    home_panel_title: "Voix de marque, nuance regionale et systemes qui les soutiennent.",
+    home_panel_body: "Nous localisons le ton, la mise en page, la terminologie et les parcours clients pour que vos lancements paraissent concus des le depart.",
+    home_orbit_kicker: "Rythme du programme",
+    home_orbit_title: "Pense pour le web, les apps, les documents et les media.",
+    home_orbit_label1: "Web",
+    home_orbit_label2: "Apps",
+    home_orbit_label3: "Media",
+    home_orbit_stat1: "Pages localisees, parcours produit et planification SEO multilingue.",
+    home_orbit_stat2: "Gestion des chaines, controle d'expansion d'interface et assurance qualite linguistique.",
+    home_orbit_stat3: "Sous-titres, adaptation de voix, scripts et contenus de formation.",
+    home_signal1: "Localisation de sites web",
+    home_signal2: "Mondialisation d'applications",
+    home_signal3: "Contenu reglementaire",
+    home_signal4: "Sous-titrage video",
+    home_signal5: "Localisation de formation",
+    home_signal6: "Support multilingue",
+    home_story_kicker: "Concu pour la nuance",
+    home_story_title: "Une localisation qui semble ecrite sur le marche, pas simplement retraitée.",
+    home_story_body1: "Les meilleures marques multilingues font plus que traduire des mots. Elles adaptent le rythme, les references, les formats et les attentes utilisateurs jusqu'a ce que l'experience paraisse naturelle dans chaque marche.",
+    home_story_body2: "Notre approche combine relecture par des natifs et sens pratique de production pour aider les equipes a aller vite sans aplatir leur voix de marque.",
+    home_story_item1: "Terminologie organisee autour de votre secteur",
+    home_story_item2: "Relecture native avant la mise en ligne et apres l'integration UI",
+    home_story_item3: "Adaptation creative pour les campagnes, la formation et le multimedia",
+    home_preview_kicker: "Services essentiels",
+    home_preview_title: "Les chantiers que les equipes nous demandent de resoudre en premier.",
+    home_preview_sub: "Commencez par un lancement cible ou reliez progressivement l'ensemble du programme.",
+    svc_web_title: "Localisation de sites web",
+    svc_web_desc: "Messagerie adaptee au marche, navigation et SEO multilingue pour pages d'atterrissage, parcours produit, centres d'aide et ecommerce.",
+    svc_app_title: "Localisation d'apps et de logiciels",
+    svc_app_desc: "Gestion des chaines, prise en compte de l'expansion UI, QA avant release et langage produit naturel sur toutes les plateformes.",
+    svc_doc_title: "Traduction documentaire et reglementaire",
+    svc_doc_desc: "Livraison claire et revue pour documents d'entreprise, contrats, SOP, politiques, supports de formation et contenus sensibles.",
+    svc_media_title: "Transcreation multimedia",
+    svc_media_desc: "Sous-titres, scripts, direction de voix, textes a l'ecran et adaptation creative pour campagnes, videos explicatives et contenus de formation.",
+    svc_ai_title: "MTPE assistee par IA",
+    svc_ai_desc: "Des flux efficaces a grand volume ou la sortie machine est revue par des experts pour retrouver ton, precision et coherence.",
+    svc_interp_title: "Interpretation et support linguistique",
+    svc_interp_desc: "Interpretation planifiee et organisation du support multilingue pour reunions, onboarding, sessions virtuelles et echanges sensibles.",
+    home_flow_kicker: "Notre methode",
+    home_flow_title: "Un flux clair pour les projets multilingues avec de vraies echeances.",
+    home_flow1_title: "Aligner",
+    home_flow1_desc: "Nous cartographions les marches cibles, les points de risque et les contenus qui soutiennent la conversion ou la conformite.",
+    home_flow2_title: "Adapter",
+    home_flow2_desc: "Le copy, l'UI, les visuels et la terminologie sont retravailles pour chaque audience, pas traduits mot a mot.",
+    home_flow3_title: "Verifier",
+    home_flow3_desc: "Les cycles de relecture confirment qualite linguistique, comportement de mise en page et adequation au marche avant publication.",
+    home_flow4_title: "Publier",
+    home_flow4_desc: "Les livrables arrivent structures pour la publication, les versions et les futures mises a jour.",
+    home_band_title: "Un seul partenaire pour le contenu, le code et la culture.",
+    home_band_body: "D'une page unique a un calendrier multilingue complet, nous construisons des programmes qui restent elegants quand le volume augmente.",
+    home_band_button: "Planifier votre lancement",
+    services_stack_kicker: "Ce que nous livrons",
+    services_stack_title: "Six lignes de service concretes, un seul systeme de qualite.",
+    services_sub: "Choisissez un seul flux ou combinez-les dans un rythme unique. Nous gardons une experience coherente de la source au livrable final.",
+    services_media_kicker: "Couche media",
+    services_media_title: "La video, la voix et la formation meritent plus qu'une traduction litterale.",
+    services_media_body: "Nous adaptons timing, sous-titres, scripts et langage visuel pour que le multimedia reste soigne apres passage d'un marche a l'autre.",
+    services_media_note1_title: "Rythme des sous-titres",
+    services_media_note1_desc: "Longueur lisible, timing naturel et formulations contextuelles pour un affichage clair.",
+    services_media_note2_title: "Voix et adaptation de script",
+    services_media_note2_desc: "Le dialogue et la narration restent fideles a l'intention tout en sonnant naturellement dans la langue cible.",
+    services_media_note3_title: "Localisation de formation",
+    services_media_note3_desc: "Modules, evaluations et supports apprenants restent coherents dans chaque deploiement.",
+    industries_sector_kicker: "Ou nous intervenons",
+    industries_sector_title: "Un support de localisation pour les equipes reglementees, produit et orientees client.",
+    industries_sub: "Chaque secteur demande un niveau de nuance different. Nous adaptons le processus linguistique a votre audience, votre logique d'approbation et votre pression de publication.",
+    sector1_title: "Sciences de la vie et sante",
+    sector1_desc: "Contenus patients, supports de formation, documentation interne et terminologie precise pour une communication sensible.",
+    sector2_title: "Juridique et conformite",
+    sector2_desc: "Contrats, politiques, disclosures et contenus a forte relecture qui doivent rester clairs sous examen.",
+    sector3_title: "Technologie et SaaS",
+    sector3_desc: "Interfaces produit, notes de version, support, onboarding et mises a jour rapides de roadmap.",
+    sector4_title: "Retail et ecommerce",
+    sector4_desc: "Messages de campagne, fiches produit, langage merchandising et parcours clients multilingues qui protegent la conversion.",
+    sector5_title: "Formation et apprentissage",
+    sector5_desc: "Cours, evaluations, guides animateur et supports d'integration qui restent pedagogiques apres adaptation.",
+    sector6_title: "Support client et operations",
+    sector6_desc: "Macros, bases de connaissance, flux de chat, contenu d'escalade et guides internes pour des equipes de service multilingues.",
+    industries_assurance_kicker: "Standards communs",
+    industries_assurance_title: "Ce qui reste constant quel que soit le secteur.",
+    assure1_title: "Ton adapte a l'audience",
+    assure1_desc: "Les choix linguistiques reflètent qui lit, ce qu'il attend et le niveau de confiance dont le moment a besoin.",
+    assure2_title: "Relecture structuree",
+    assure2_desc: "Rien d'important ne depend d'un seul passage. Les contenus critiques recoivent des controles superposes avant d'avancer.",
+    assure3_title: "Pret pour la diffusion",
+    assure3_desc: "Nous regardons au-dela des mots : mise en page, lisibilite et packaging publiable pour eviter les corrections de derniere minute.",
+    output1_title: "Kits de deploiement",
+    output1_desc: "Fichiers approuves, notes de marche et indications pratiques pour publication ou transmission interne.",
+    output2_title: "Brouillons prets pour revue",
+    output2_desc: "Des versions claires pour validation juridique, produit, marketing ou regionale.",
+    output3_title: "Actifs durables",
+    output3_desc: "Un contenu prepare pour que les futures mises a jour ne vous obligent pas a redemarrer la terminologie et la revue.",
+    contact_eyebrow: "Contacter LexiScale",
+    contact_title: "Expliquez-nous votre besoin et nous tracerons la bonne trajectoire multilingue.",
+    contact_sub: "Utilisez le formulaire ci-dessous pour sites, apps, documents, media ou support continu. Si l'e-mail est plus simple, ecrivez-nous directement.",
+    contact_email_kicker: "Priorite a l'e-mail",
+    contact_email_title: "Vous preferez un message direct avant de cadrer le projet ?",
+    contact_email_body: "Envoyez votre brief, votre calendrier ou un exemple de contenu par e-mail. Nous pouvons commencer simplement puis transformer l'echange en plan clair.",
+    contact_side2_title: "Formats de projet flexibles",
+    contact_side2_desc: "Assets uniques, lancements multilingues, desk de revue continu ou soutien sur une phase d'un programme plus vaste.",
+    contact_side3_title: "Prochaine etape claire",
+    contact_side3_desc: "Une fois le scope compris, nous recommandons le bon point de depart au lieu d'imposer une offre unique.",
+    faq_kicker: "Avant d'envoyer",
+    faq_title: "Quelques questions frequentes.",
+    faq1_q: "Que faut-il inclure dans le brief ?",
+    faq1_a: "Langues cibles, delais, liens, fichiers d'exemple et toute note sur l'audience ou le ton suffisent pour demarrer.",
+    faq2_q: "Pouvez-vous intervenir si le deploiement a deja commence ?",
+    faq2_a: "Oui. Nous pouvons rejoindre un projet en cours, soutenir une release precise ou stabiliser le workflow apres la phase urgente.",
+    faq3_q: "Plusieurs versions de marche peuvent-elles rester alignees dans le temps ?",
+    faq3_a: "Oui. Le workflow est construit pour garder les versions paralleles synchronisees au fil des mises a jour.",
+    form_fname: "Prenom",
+    form_lname: "Nom",
+    form_email: "E-mail professionnel",
+    form_service: "Service principal requis",
+    form_opt_default: "Selectionnez un domaine",
+    form_opt_1: "Traduction documentaire certifiee",
+    form_opt_2: "Localisation web strategique",
+    form_opt_3: "Mondialisation logiciel / app",
+    form_opt_4: "Transcreation multimedia",
+    form_opt_5: "MTPE assistee par IA",
+    form_opt_6: "Interpretation executive",
+    form_opt_7: "Strategie globale sur mesure",
+    form_scope: "Portee et exigences du projet",
+    form_submit: "Envoyer les details du projet",
+    form_ph_first_name: "Jean",
+    form_ph_last_name: "Dupont",
+    form_ph_email: "vous@entreprise.com",
+    form_ph_details: "Indiquez les langues cibles, le volume estime et le calendrier"
+  },
+  es: {
+    meta_home_title: "LexiScale | Estudio de localizacion para varios mercados",
+    meta_services_title: "Servicios LexiScale | Localizacion web, apps, media y documentos",
+    meta_industries_title: "Sectores LexiScale | Localizacion para equipos regulados y en crecimiento",
+    meta_contact_title: "Contacto LexiScale | Solicitar una cotizacion de localizacion",
+    nav_home: "Inicio",
+    nav_services: "Servicios",
+    nav_industries: "Sectores",
+    nav_contact: "Contacto",
+    nav_quote: "Solicitar cotizacion",
+    common_explore_services: "Ver servicios",
+    common_contact_team: "Contactar a LexiScale",
+    common_plan_launch: "Planificar lanzamiento",
+    footer_tagline: "LexiScale diseña experiencias multilingues para equipos que necesitan matiz, velocidad y control.",
+    footer_quick_links: "Enlaces rapidos",
+    footer_service_label: "Areas clave",
+    footer_service1: "Localizacion web",
+    footer_service2: "Localizacion de apps",
+    footer_service3: "Documentos y cumplimiento",
+    footer_service4: "Media y aprendizaje",
+    footer_email_label: "Correo",
+    footer_copy: "Creado para una comunicacion sin fronteras.",
+    home_eyebrow: "Localizacion para lanzamientos ambiciosos",
+    home_hero_title: "Haz que cada mercado se sienta <span class='accent'>pensado en destino.</span>",
+    home_hero_sub: "LexiScale ayuda a las marcas a adaptar sitios web, apps, documentos, contenido de aprendizaje y video para que cada audiencia reciba una experiencia clara, cultural y fiel a la marca.",
+    home_hero_primary: "Solicitar cotizacion",
+    home_hero_secondary: "Ver servicios",
+    home_metric1_label: "marco de lanzamiento",
+    home_metric2_label: "capas de revision para textos criticos",
+    home_metric3_label: "ventana de respuesta para nuevas consultas",
+    home_panel_kicker: "Foco del programa",
+    home_panel_title: "Voz de marca, matiz regional y los sistemas que lo sostienen.",
+    home_panel_body: "Localizamos tono, estructura, terminologia y recorridos de cliente para que los lanzamientos se sientan diseñados desde el inicio.",
+    home_orbit_kicker: "Ritmo del programa",
+    home_orbit_title: "Pensado para web, apps, documentos y media.",
+    home_orbit_label1: "Web",
+    home_orbit_label2: "Apps",
+    home_orbit_label3: "Media",
+    home_orbit_stat1: "Landing pages localizadas, flujos de producto y plan SEO multilingue.",
+    home_orbit_stat2: "Gestion de cadenas, control de expansion UI y QA linguistica.",
+    home_orbit_stat3: "Subtitulos, adaptacion de voz, guiones y contenido formativo.",
+    home_signal1: "Localizacion web",
+    home_signal2: "Globalizacion de apps",
+    home_signal3: "Contenido regulatorio",
+    home_signal4: "Subtitulado de video",
+    home_signal5: "Localizacion de aprendizaje",
+    home_signal6: "Soporte multilingue",
+    home_story_kicker: "Diseñado para el matiz",
+    home_story_title: "Una localizacion que parece escrita dentro del mercado, no corregida al final.",
+    home_story_body1: "Las mejores marcas multilingues hacen mas que traducir palabras. Ajustan ritmo, referencias, formato y expectativas de usuario hasta que la experiencia se siente natural en cada mercado.",
+    home_story_body2: "Nuestro enfoque combina revision de nativos con diseño de produccion practico para que los equipos avancen rapido sin perder voz de marca.",
+    home_story_item1: "Terminologia organizada alrededor de tu sector",
+    home_story_item2: "Revision nativa antes del lanzamiento y despues de la implementacion UI",
+    home_story_item3: "Adaptacion creativa para campañas, aprendizaje y multimedia",
+    home_preview_kicker: "Servicios clave",
+    home_preview_title: "Las lineas de trabajo que la mayoria de los equipos nos pide resolver primero.",
+    home_preview_sub: "Empieza con un lanzamiento enfocado o conecta todo el programa con el tiempo.",
+    svc_web_title: "Localizacion de sitios web",
+    svc_web_desc: "Mensajes ajustados al mercado, navegacion y SEO multilingue para landing pages, recorridos de producto, centros de ayuda y ecommerce.",
+    svc_app_title: "Localizacion de apps y software",
+    svc_app_desc: "Gestión de cadenas, control de expansion UI, QA lista para release y lenguaje de producto natural en cada plataforma.",
+    svc_doc_title: "Traduccion documental y regulatoria",
+    svc_doc_desc: "Entrega clara y revisada para documentos empresariales, contratos, SOP, politicas, materiales de formacion y contenido sensible.",
+    svc_media_title: "Transcreacion multimedia",
+    svc_media_desc: "Subtitulos, guiones, direccion de voz, texto en pantalla y adaptacion creativa para campañas, explicadores y contenido de aprendizaje.",
+    svc_ai_title: "MTPE asistida por IA",
+    svc_ai_desc: "Flujos eficientes para alto volumen donde la salida automatica se revisa por expertos para recuperar tono, precision y consistencia.",
+    svc_interp_title: "Interpretacion y soporte linguistico",
+    svc_interp_desc: "Interpretacion programada y planificación de soporte multilingue para reuniones, onboarding, sesiones virtuales y conversaciones delicadas.",
+    home_flow_kicker: "Como trabajamos",
+    home_flow_title: "Un flujo claro para proyectos multilingues con plazos reales.",
+    home_flow1_title: "Alinear",
+    home_flow1_desc: "Mapeamos mercados objetivo, puntos de riesgo y el contenido que impulsa conversion o cumplimiento.",
+    home_flow2_title: "Adaptar",
+    home_flow2_desc: "Copy, UI, visuales y terminologia se rehacen para cada audiencia, no se traducen de forma literal.",
+    home_flow3_title: "Validar",
+    home_flow3_desc: "Las rondas de revision comprueban calidad linguistica, comportamiento visual y ajuste al mercado antes de publicar.",
+    home_flow4_title: "Lanzar",
+    home_flow4_desc: "Los entregables finales llegan estructurados para publicacion, versionado y futuras actualizaciones.",
+    home_band_title: "Un solo aliado para contenido, codigo y cultura.",
+    home_band_body: "Desde una sola landing hasta un calendario de lanzamientos multilingues, construimos programas que siguen viendose solidos cuando crece el volumen.",
+    home_band_button: "Planificar lanzamiento",
+    services_stack_kicker: "Lo que entregamos",
+    services_stack_title: "Seis lineas de servicio practicas, un mismo sistema de calidad.",
+    services_sub: "Elige una sola linea de trabajo o combinalas en un mismo ritmo operativo. Mantenemos una experiencia coherente desde la fuente hasta la entrega final.",
+    services_media_kicker: "Capa media",
+    services_media_title: "Video, voz y aprendizaje merecen algo mas que una traduccion literal.",
+    services_media_body: "Adaptamos ritmo, subtitulos, guiones y lenguaje visual para que el contenido multimedia siga sintiendose cuidado al cruzar mercados.",
+    services_media_note1_title: "Ritmo de subtitulos",
+    services_media_note1_desc: "Longitud legible, temporizacion natural y frases con contexto para claridad en pantalla.",
+    services_media_note2_title: "Adaptacion de voz y guion",
+    services_media_note2_desc: "Dialogo y narracion mantienen la intencion original pero suenan naturales en la lengua destino.",
+    services_media_note3_title: "Localizacion de formacion",
+    services_media_note3_desc: "Modulos, evaluaciones y materiales de apoyo conservan coherencia en cada despliegue.",
+    industries_sector_kicker: "Donde encajamos",
+    industries_sector_title: "Soporte de localizacion para equipos regulados, orientados a producto y de cara al cliente.",
+    industries_sub: "Cada sector exige un nivel distinto de matiz. Ajustamos el proceso linguistico a tu audiencia, tu logica de aprobacion y tu presion de salida.",
+    sector1_title: "Life Sciences y salud",
+    sector1_desc: "Contenido para pacientes, materiales formativos, documentacion interna y terminologia precisa para comunicacion sensible.",
+    sector2_title: "Legal y cumplimiento",
+    sector2_desc: "Contratos, politicas, divulgaciones y contenido con alta revision que debe mantenerse claro bajo examen.",
+    sector3_title: "Tecnologia y SaaS",
+    sector3_desc: "Interfaces de producto, notas de version, soporte, onboarding y cambios rapidos de roadmap.",
+    sector4_title: "Retail y ecommerce",
+    sector4_desc: "Mensajes de campaña, copy de producto, lenguaje comercial y recorridos multilingues que protegen la conversion.",
+    sector5_title: "Aprendizaje y formacion",
+    sector5_desc: "Cursos, evaluaciones, guias para facilitadores y materiales de incorporacion que siguen enseñando bien despues de la adaptacion.",
+    sector6_title: "Soporte al cliente y operaciones",
+    sector6_desc: "Macros, bases de conocimiento, flujos de chat, contenido de escalamiento y guias internas para equipos de servicio multilingue.",
+    industries_assurance_kicker: "Criterios comunes",
+    industries_assurance_title: "Lo que se mantiene constante en cualquier sector.",
+    assure1_title: "Tono orientado a la audiencia",
+    assure1_desc: "Las decisiones linguisticas reflejan quien lee, que necesita y cuanta confianza exige el momento.",
+    assure2_title: "Revision estructurada",
+    assure2_desc: "Nada importante depende de una sola pasada. El material critico recibe controles en capas antes de avanzar.",
+    assure3_title: "Listo para publicar",
+    assure3_desc: "Miramos mas alla de las palabras: maquetacion, legibilidad y empaquetado publicable para evitar correcciones de ultimo minuto.",
+    output1_title: "Kits de despliegue",
+    output1_desc: "Archivos aprobados, notas por mercado y guia practica para publicacion o traspaso interno.",
+    output2_title: "Borradores listos para revision",
+    output2_desc: "Versiones claras para que legal, producto, marketing o equipos regionales aprueben con rapidez.",
+    output3_title: "Activos preparados para el futuro",
+    output3_desc: "Contenido organizado para que futuras actualizaciones no obliguen a reiniciar terminologia y revision desde cero.",
+    contact_eyebrow: "Contactar a LexiScale",
+    contact_title: "Cuéntanos lo que necesitas y trazaremos la ruta multilingue adecuada.",
+    contact_sub: "Usa el formulario de abajo para sitios web, apps, documentos, media o soporte continuo. Si prefieres correo, escríbenos directamente.",
+    contact_email_kicker: "Primero por correo",
+    contact_email_title: "¿Prefieres un mensaje directo antes de definir el proyecto?",
+    contact_email_body: "Envía tu brief, calendario o material de muestra por correo. Podemos empezar con una conversación ligera y convertirla en un plan claro.",
+    contact_side2_title: "Formatos de proyecto flexibles",
+    contact_side2_desc: "Activos individuales, lanzamientos multilingues, mesas de revision continuas o apoyo en una fase concreta de un programa mayor.",
+    contact_side3_title: "Siguiente paso claro",
+    contact_side3_desc: "Una vez entendido el alcance, recomendamos el mejor punto de partida en lugar de empujar un paquete unico para todo.",
+    faq_kicker: "Antes de enviar",
+    faq_title: "Algunas preguntas comunes.",
+    faq1_q: "¿Que debo incluir en el brief?",
+    faq1_a: "Idiomas objetivo, plazos, enlaces, archivos de muestra y cualquier nota sobre audiencia o tono bastan para empezar.",
+    faq2_q: "¿Pueden ayudar si el despliegue ya esta en marcha?",
+    faq2_a: "Si. Podemos entrar en un proyecto vivo, apoyar un ciclo de release o construir un flujo mas estable despues de la fase urgente.",
+    faq3_q: "¿Pueden mantenerse alineadas varias versiones de mercado con el tiempo?",
+    faq3_a: "Si. El flujo esta pensado para mantener versiones paralelas sincronizadas a medida que el contenido evoluciona.",
+    form_fname: "Nombre",
+    form_lname: "Apellido",
+    form_email: "Correo corporativo",
+    form_service: "Servicio principal requerido",
+    form_opt_default: "Seleccione un enfoque",
+    form_opt_1: "Traduccion documental certificada",
+    form_opt_2: "Localizacion web estrategica",
+    form_opt_3: "Globalizacion de software / app",
+    form_opt_4: "Transcreacion multimedia",
+    form_opt_5: "MTPE asistida por IA",
+    form_opt_6: "Interpretacion ejecutiva",
+    form_opt_7: "Estrategia global a medida",
+    form_scope: "Alcance y requisitos del proyecto",
+    form_submit: "Enviar detalles del proyecto",
+    form_ph_first_name: "Juan",
+    form_ph_last_name: "Garcia",
+    form_ph_email: "tu@empresa.com",
+    form_ph_details: "Describe tus idiomas objetivo, el volumen estimado y el calendario"
+  },
+  pt: {
+    meta_home_title: "LexiScale | Estúdio de localização para múltiplos mercados",
+    meta_services_title: "Serviços LexiScale | Localização de web, aplicativos, mídia e documentos",
+    meta_industries_title: "Setores LexiScale | Localização para equipes regulamentadas e em crescimento",
+    meta_contact_title: "Contato LexiScale | Solicite um orçamento de localização",
+    nav_home: "Início",
+    nav_services: "Serviços",
+    nav_industries: "Setores",
+    nav_contact: "Contato",
+    nav_quote: "Solicitar Orçamento",
+    common_explore_services: "Explorar Serviços",
+    common_contact_team: "Contatar a LexiScale",
+    common_plan_launch: "Planeje o Seu Lançamento",
+    footer_tagline: "A LexiScale molda experiências multilíngues para equipes que necessitam de precisão, ritmo e controle.",
+    footer_quick_links: "Links Rápidos",
+    footer_service_label: "Áreas de Foco",
+    footer_service1: "Localização de websites",
+    footer_service2: "Localização de aplicativos",
+    footer_service3: "Documentos e conformidade",
+    footer_service4: "Mídia e aprendizagem",
+    footer_email_label: "E-mail",
+    footer_copy: "Criado para comunicações sem fronteiras.",
+    home_eyebrow: "Localização para lançamentos ambiciosos",
+    home_hero_title: "Faça com que cada mercado se sinta <span class='accent'>idealizado localmente.</span>",
+    home_hero_sub: "A LexiScale ajuda marcas a adaptar sites, aplicativos, documentos, materiais de aprendizagem e vídeos para que cada público receba uma experiência clara, culturalmente ajustada e fiel à marca.",
+    home_hero_primary: "Solicitar Orçamento",
+    home_hero_secondary: "Explorar Serviços",
+    home_metric1_label: "estrutura de lançamento",
+    home_metric2_label: "camadas de revisão de textos críticos",
+    home_metric3_label: "janela de resposta para novas consultas",
+    home_panel_kicker: "Foco do Programa",
+    home_panel_title: "Voz da marca, nuances regionais e os sistemas ao redor.",
+    home_panel_body: "Localizamos o tom, layout, terminologia e as jornadas do cliente para que os lançamentos globais pareçam ter sido planejados desde o início.",
+    home_orbit_kicker: "Ritmo do Programa",
+    home_orbit_title: "Desenvolvido para web, aplicativos, documentos e mídia.",
+    home_orbit_label1: "Web",
+    home_orbit_label2: "Apps",
+    home_orbit_label3: "Mídia",
+    home_orbit_stat1: "Páginas de destino localizadas, fluxos de produtos e SEO multilíngue.",
+    home_orbit_stat2: "Gerenciamento de strings, expansão de UI e QA linguístico.",
+    home_orbit_stat3: "Legendas, adaptação de voz, roteiros e conteúdo de treinamento.",
+    home_signal1: "Localização de sites",
+    home_signal2: "Globalização de aplicativos",
+    home_signal3: "Conteúdo regulatório",
+    home_signal4: "Legendagem de vídeos",
+    home_signal5: "Localização de aprendizagem",
+    home_signal6: "Suporte multilíngue",
+    home_story_kicker: "Projetado para as nuances",
+    home_story_title: "Uma localização que parece elaborada no próprio mercado, e não traduzida à pressa.",
+    home_story_body1: "As melhores marcas globais fazem muito mais do que traduzir textos. Elas adaptam ritmo, referências, formatos e a própria expectativa do utilizador até a experiência soar natural.",
+    home_story_body2: "A nossa abordagem mescla a revisão por falantes nativos com um design de produção eficiente, ajudando a sua equipe a avançar rapidamente sem descaracterizar a marca.",
+    home_story_item1: "Sistemas terminológicos adaptados ao seu setor",
+    home_story_item2: "Revisão nativa antes do lançamento e pós-implementação de interface",
+    home_story_item3: "Adaptação criativa para campanhas, treinamentos e multimídia",
+    home_preview_kicker: "Serviços Essenciais",
+    home_preview_title: "As principais exigências com as quais as equipes nos procuram.",
+    home_preview_sub: "Comece com um lançamento focado ou conecte todo o programa gradualmente.",
+    svc_web_title: "Localização de Websites",
+    svc_web_desc: "Comunicação ajustada ao mercado, navegação e SEO multilíngue para landing pages, comércio eletrônico e centrais de ajuda.",
+    svc_app_title: "Localização de Apps e Software",
+    svc_app_desc: "Gestão de textos, atenção à expansão da interface, QA rigoroso e naturalidade de produto entre diferentes plataformas.",
+    svc_doc_title: "Tradução de Documentos e Regulamentações",
+    svc_doc_desc: "Entregas precisas para documentos corporativos, contratos, SOPs, políticas e qualquer material altamente regulamentado.",
+    svc_media_title: "Transcriação Multimídia",
+    svc_media_desc: "Legendas, guiões, direção de voz e adaptação criativa para campanhas publicitárias, tutoriais e e-learning.",
+    svc_ai_title: "MTPE Auxiliado por IA",
+    svc_ai_desc: "Fluxos de alto volume onde o resultado das máquinas é refinado por especialistas para garantir o tom, a precisão e a coerência.",
+    svc_interp_title: "Interpretação e Suporte Linguístico",
+    svc_interp_desc: "Interpretação simultânea e acompanhamento em reuniões, integrações de equipes e interações virtuais sensíveis.",
+    home_flow_kicker: "Como Trabalhamos",
+    home_flow_title: "Um fluxo de trabalho claro para projetos com prazos rigorosos.",
+    home_flow1_title: "Alinhamento",
+    home_flow1_desc: "Mapeamos os mercados-alvo, pontos de risco e o conteúdo vital que impulsiona a conversão.",
+    home_flow2_title: "Adaptação",
+    home_flow2_desc: "Textos, interfaces, recursos visuais e glossários são reestruturados para cada público, não apenas traduzidos.",
+    home_flow3_title: "Validação",
+    home_flow3_desc: "Os ciclos de revisão testam a qualidade linguística, layout e adequação cultural antes do lançamento.",
+    home_flow4_title: "Lançamento",
+    home_flow4_desc: "Os materiais finais são entregues estruturados para publicação, garantindo suporte a futuras atualizações.",
+    home_band_title: "Um parceiro único para o seu conteúdo, código e cultura.",
+    home_band_body: "Desde uma simples landing page até um complexo calendário de lançamentos, construímos soluções escaláveis.",
+    home_band_button: "Planeje o Seu Lançamento",
+    services_stack_kicker: "O Que Entregamos",
+    services_stack_title: "Seis pilares operacionais, um único padrão de qualidade.",
+    services_sub: "Escolha uma linha de atuação específica ou integre-as de acordo com a sua necessidade. Asseguramos excelência contínua.",
+    services_media_kicker: "Camada de Mídia",
+    services_media_title: "A sua mídia em vídeo e treinamento merece muito mais do que tradução literal.",
+    services_media_body: "Adequamos o timing, a legendagem, os guiões e os elementos visuais para manter o impacto emocional intocável.",
+    services_media_note1_title: "Ritmo de legendagem",
+    services_media_note1_desc: "Extensão adequada das falas, sincronização e fluidez textual para garantir total legibilidade nas telas.",
+    services_media_note2_title: "Adaptação de vozes e roteiro",
+    services_media_note2_desc: "Diálogos e narrações preservam o impacto original soando plenamente naturais na língua de destino.",
+    services_media_note3_title: "Localização de treinamentos",
+    services_media_note3_desc: "Módulos, exames de avaliação e apoios ao aprendiz permanecem consistentes em todos os desdobramentos.",
+    industries_sector_kicker: "Onde Nos Encaixamos",
+    industries_sector_title: "Soluções corporativas focadas em clientes e produtos.",
+    industries_sub: "Setores distintos exigem graus de precisão variados. Moldamos o processo em função do rigor do seu nicho.",
+    sector1_title: "Saúde e Ciências Farmacêuticas",
+    sector1_desc: "Terminologia rigorosa e exata para interações de pacientes, regulamentações clínicas e comunicações sensíveis.",
+    sector2_title: "Compliance e Assuntos Jurídicos",
+    sector2_desc: "Revisão cirúrgica de contratos, divulgações corporativas e políticas de privacidade com força legal.",
+    sector3_title: "Setor Tecnológico e SaaS",
+    sector3_desc: "Localização ágil de notas de lançamento (release notes), integrações em UI e materiais de apoio rápido.",
+    sector4_title: "Varejo e E-Commerce",
+    sector4_desc: "Campanhas publicitárias altamente persuasivas, fichas de produto e toda a comunicação voltada à retenção do consumidor.",
+    sector5_title: "Educação Corporativa",
+    sector5_desc: "Tradução de avaliações, materiais de integração profissional e recursos pedagógicos adaptados perfeitamente.",
+    sector6_title: "Apoio e Operações do Cliente",
+    sector6_desc: "Guias internos, portais de atendimento e automações adaptadas visando times de apoio internacionais.",
+    industries_assurance_kicker: "Padrões Exigentes",
+    industries_assurance_title: "O rigor se mantém em todos os setores.",
+    assure1_title: "Tom direcionado",
+    assure1_desc: "Adequação absoluta da mensagem, analisando não só quem lê, mas o que ele precisa naquele instante.",
+    assure2_title: "Revisão Estruturada",
+    assure2_desc: "Documentos vitais passam invariavelmente por camadas estritas de filtragem, mitigando por completo possíveis falhas.",
+    assure3_title: "Pronto para Uso",
+    assure3_desc: "Preocupamo-nos com aspetos que transcendem o vocabulário, certificando o layout e a aparência final no sistema.",
+    output1_title: "Kits de Desdobramento",
+    output1_desc: "Material e glossários formatados com diretrizes completas para uso interno e implementação digital.",
+    output2_title: "Minutas Avalizadas",
+    output2_desc: "Entregas límpidas a fim de facilitar assinaturas de equipas do departamento jurídico, executivo ou regional.",
+    output3_title: "Arquivos Reutilizáveis",
+    output3_desc: "Sistematização prévia em memória de tradução para tornar repetições subsequentes imediatas e fluídas.",
+    contact_eyebrow: "Contato LexiScale",
+    contact_title: "Descreva a sua visão, nós desenharemos o roteiro multilíngue adequado.",
+    contact_sub: "Faça uso do nosso formulário rápido caso prefira compartilhar o projeto. Se achar melhor trocar um e-mail antes, sinta-se à vontade.",
+    contact_email_kicker: "Primeiro E-mail",
+    contact_email_title: "Gostaria de discutir a ideia antes do escopo total?",
+    contact_email_body: "Inicie o papo partilhando prazos e exigências curtas no nosso correio. Entenderemos a meta primeiro.",
+    contact_side2_title: "Flexibilidade na Entrega",
+    contact_side2_desc: "Ativos individuais, campanhas de alto volume e suportes diários em projetos integrados de grande escala.",
+    contact_side3_title: "Os Seus Próximos Passos",
+    contact_side3_desc: "Sugerimos abordagens personalizadas assim que entendemos a infraestrutura tecnológica atual do cliente.",
+    faq_kicker: "Antes de Enviar",
+    faq_title: "Esclarecimentos Comuns.",
+    faq1_q: "O que deve constar no briefing do meu projeto?",
+    faq1_a: "Mencionar idiomas principais, datas pretendidas, exemplos da voz atual da empresa será perfeito para dar início.",
+    faq2_q: "Seriam capazes de adotar um lançamento que já começou?",
+    faq2_a: "Perfeitamente. Somos habituados a acoplar-nos em fases urgentes e construir fluxos perenes logo após isso.",
+    faq3_q: "Versões em diferentes regiões mantêm-se em sintonia ao longo dos anos?",
+    faq3_a: "Correto. Nosso sistema propaga as mudanças na raiz da memória, certificando padronização perene.",
+    form_fname: "Primeiro Nome",
+    form_lname: "Sobrenome",
+    form_email: "Email Corporativo",
+    form_service: "Demanda Principal",
+    form_opt_default: "Determine seu foco",
+    form_opt_1: "Tradução Certificada de Documentos",
+    form_opt_2: "Localização Web Estratégica",
+    form_opt_3: "Globalização de Aplicativos e Software",
+    form_opt_4: "Transcriação de Multimídia",
+    form_opt_5: "MTPE e Pós-Edição Apoiada por IA",
+    form_opt_6: "Serviço de Interpretação Executiva",
+    form_opt_7: "Construção de Estratégia Global Integrada",
+    form_scope: "Esclareça o Seu Desafio",
+    form_submit: "Enviar Para Análise",
+    form_ph_first_name: "João",
+    form_ph_last_name: "Silva",
+    form_ph_email: "exemplo@empresa.com",
+    form_ph_details: "Indique prazos aproximados, público visado ou dúvidas iniciais."
+  },
+  nl: {
+    meta_home_title: "LexiScale | Lokalisatiestudio voor internationale markten",
+    meta_services_title: "LexiScale Diensten | Web-, app-, media- en documentlokalisatie",
+    meta_industries_title: "LexiScale Sectoren | Lokalisatie voor gereguleerde en snelgroeiende teams",
+    meta_contact_title: "LexiScale Contact | Vraag een lokalisatieofferte aan",
+    nav_home: "Home",
+    nav_services: "Diensten",
+    nav_industries: "Sectoren",
+    nav_contact: "Contact",
+    nav_quote: "Offerte Aanvragen",
+    common_explore_services: "Diensten Bekijken",
+    common_contact_team: "Neem Contact Op",
+    common_plan_launch: "Plan Uw Lancering",
+    footer_tagline: "LexiScale creëert meertalige ervaringen voor teams die nuance, tempo en controle eisen.",
+    footer_quick_links: "Snelkoppelingen",
+    footer_service_label: "Aandachtsgebieden",
+    footer_service1: "Website lokalisatie",
+    footer_service2: "App lokalisatie",
+    footer_service3: "Documenten en compliance",
+    footer_service4: "Media en e-learning",
+    footer_email_label: "E-mail",
+    footer_copy: "Gebouwd voor grenzeloze communicatie.",
+    home_eyebrow: "Lokalisatie voor ambitieuze lanceringen",
+    home_hero_title: "Laat elke markt aanvoelen als <span class='accent'>lokaal bedacht.</span>",
+    home_hero_sub: "LexiScale helpt merken bij het aanpassen van websites, apps, documenten, lesmateriaal en video's, zodat elke doelgroep een heldere, cultureel afgestemde en merkgetrouwe ervaring krijgt.",
+    home_hero_primary: "Offerte Aanvragen",
+    home_hero_secondary: "Diensten Bekijken",
+    home_metric1_label: "lanceringsframework",
+    home_metric2_label: "revisielagen voor kritieke teksten",
+    home_metric3_label: "reactietijd voor nieuwe aanvragen",
+    home_panel_kicker: "Focus van het Programma",
+    home_panel_title: "Merkstem, regionale nuances en de systemen daarachter.",
+    home_panel_body: "Wij lokaliseren toon, lay-out, terminologie en klantreizen zodat marktintroducties vanaf het begin ontworpen aanvoelen en niet als een bijzaak.",
+    home_orbit_kicker: "Ritme van het Programma",
+    home_orbit_title: "Gemaakt voor web, apps, documenten en media.",
+    home_orbit_label1: "Web",
+    home_orbit_label2: "Apps",
+    home_orbit_label3: "Media",
+    home_orbit_stat1: "Gelokaliseerde landingspagina's, productflows en meertalige SEO.",
+    home_orbit_stat2: "Stringbeheer, controles op UI-uitbreiding en linguïstische QA.",
+    home_orbit_stat3: "Ondertiteling, stemadaptatie, scripts en trainingsmateriaal.",
+    home_signal1: "Website lokalisatie",
+    home_signal2: "App globalisering",
+    home_signal3: "Gereguleerde content",
+    home_signal4: "Video ondertiteling",
+    home_signal5: "E-learning lokalisatie",
+    home_signal6: "Meertalige support",
+    home_story_kicker: "Ontworpen voor Nuance",
+    home_story_title: "Lokalisatie die leest alsof deze lokaal is geschreven, niet slechts vertaald.",
+    home_story_body1: "De sterkste internationale merken doen meer dan alleen teksten vertalen. Ze passen het ritme, de referenties en de opmaak aan totdat de ervaring in elke markt natuurlijk aanvoelt.",
+    home_story_body2: "Onze aanpak combineert beoordelingen door moedertaalsprekers met een praktische productieworkflow, waardoor uw team snel kan schakelen zonder dat de merkstem afzwakt.",
+    home_story_item1: "Terminologiesystemen afgestemd op uw sector",
+    home_story_item2: "Native beoordeling vóór livegang en na UI-implementatie",
+    home_story_item3: "Creatieve adaptatie voor campagnes, trainingen en multimedia",
+    home_preview_kicker: "Kerndiensten",
+    home_preview_title: "De uitdagingen die teams ons als eerste laten oplossen.",
+    home_preview_sub: "Begin met een gerichte lancering of verbind het volledige programma naadloos in de loop der tijd.",
+    svc_web_title: "Website Lokalisatie",
+    svc_web_desc: "Marktgerichte boodschappen, navigatie en meertalige SEO voor landingspagina's, klantreizen, helpcenters en e-commerce.",
+    svc_app_title: "App en Software Lokalisatie",
+    svc_app_desc: "Slim stringbeheer, QA voor releases en een natuurlijk aanvoelende producttaal op alle platforms.",
+    svc_doc_title: "Document- en Juridische Vertaling",
+    svc_doc_desc: "Heldere, streng gecontroleerde levering van zakelijke documenten, contracten, SOP's, beleidslijnen en compliance-materiaal.",
+    svc_media_title: "Multimedia Transcreatie",
+    svc_media_desc: "Ondertiteling, scripts, stemregie en creatieve adaptatie voor videocampagnes, uitlegvideo's en trainingsmateriaal.",
+    svc_ai_title: "AI-Ondersteunde MTPE",
+    svc_ai_desc: "Efficiënte workflows voor grote volumes, waarbij machine-output door experts wordt verfijnd om toon, nauwkeurigheid en consistentie te herstellen.",
+    svc_interp_title: "Tolkdiensten en Taalondersteuning",
+    svc_interp_desc: "Geplande tolkdiensten en meertalige support voor vergaderingen, onboarding, virtuele sessies en gevoelige zakelijke gesprekken.",
+    home_flow_kicker: "Hoe Wij Werken",
+    home_flow_title: "Een heldere workflow voor meertalige projecten met harde deadlines.",
+    home_flow1_title: "Afstemmen",
+    home_flow1_desc: "We brengen doelmarkten, risicopunten en de content in kaart die zorgt voor conversie en compliance.",
+    home_flow2_title: "Aanpassen",
+    home_flow2_desc: "Copy, UI, visuals en terminologie worden voor elk publiek herschreven, niet enkel woord voor woord vertaald.",
+    home_flow3_title: "Valideren",
+    home_flow3_desc: "Revisierondes controleren taalkwaliteit, lay-out en marktaansluiting ruim voor de release.",
+    home_flow4_title: "Lanceren",
+    home_flow4_desc: "Definitieve bestanden worden gestructureerd geleverd, klaar voor publicatie, versiebeheer en toekomstige updates.",
+    home_band_title: "Eén partner voor content, code en cultuur.",
+    home_band_body: "Van één enkele landingspagina tot een meertalige contentkalender, we bouwen workflows die soepel blijven, zelfs wanneer het volume groeit.",
+    home_band_button: "Plan Uw Lancering",
+    services_stack_kicker: "Wat Wij Leveren",
+    services_stack_title: "Zes praktische diensten, één gedeeld kwaliteitssysteem.",
+    services_sub: "Kies een specifieke dienst of combineer ze in een geïntegreerd proces. Wij garanderen een feilloze ervaring van bronmateriaal tot eindproduct.",
+    services_media_kicker: "Media Laag",
+    services_media_title: "Video, stem en e-learning verdienen meer dan een letterlijke vertaling.",
+    services_media_body: "We passen timing, ondertitels en beeldtaal aan, zodat multimedia-content ook over de grens naadloos en professioneel oogt.",
+    services_media_note1_title: "Ritme van ondertiteling",
+    services_media_note1_desc: "Leesbare regellengte, natuurlijke timing en contextgevoelige frasering voor maximale helderheid op het scherm.",
+    services_media_note2_title: "Stem- en scriptadaptatie",
+    services_media_note2_desc: "Dialoog en voice-over blijven trouw aan uw merkintentie, maar klinken 100% natuurlijk in de doeltaal.",
+    services_media_note3_title: "Training lokalisatie",
+    services_media_note3_desc: "Cursusmodules, toetsen en ondersteunend materiaal blijven consistent bij elke internationale uitrol.",
+    industries_sector_kicker: "Waar Wij Passen",
+    industries_sector_title: "Lokalisatie voor gereguleerde, productgedreven en klantgerichte teams.",
+    industries_sub: "Verschillende sectoren vragen om een verschillende mate van nuance. Wij stemmen ons proces af op uw publiek, uw goedkeuringslogica en uw time-to-market.",
+    sector1_title: "Life Sciences & Gezondheidszorg",
+    sector1_desc: "Patiëntgerichte content, klinische handleidingen en uiterst nauwkeurige terminologie voor gevoelige communicatie.",
+    sector2_title: "Juridisch & Compliance",
+    sector2_desc: "Contracten, compliance-beleid en rapportages die volstrekt helder en accuraat moeten blijven, zelfs onder juridische loep.",
+    sector3_title: "Technologie & SaaS",
+    sector3_desc: "Software-interfaces, release notes, ondersteuningsartikelen en onboarding voor snel evoluerende productroadmaps.",
+    sector4_title: "Retail & E-commerce",
+    sector4_desc: "Campagneboodschappen, productteksten en overtuigende meertalige klantreizen ter bescherming van uw online conversie.",
+    sector5_title: "Onderwijs & Training",
+    sector5_desc: "E-learning, assessments, handleidingen en inwerkprogramma's die hun educatieve kracht behouden na vertaling.",
+    sector6_title: "Klantenservice & Operaties",
+    sector6_desc: "Kennisbanken, chat-scripts, interne handleidingen en escalatie-content voor wereldwijde ondersteuningsteams.",
+    industries_assurance_kicker: "Gedeelde Standaarden",
+    industries_assurance_title: "Wat consistent blijft, in elke sector.",
+    assure1_title: "Doelgroepgerichte toon",
+    assure1_desc: "De taalkeuze weerspiegelt exact wie de lezer is, wat zij nodig hebben en het gewenste niveau van vertrouwen.",
+    assure2_title: "Gestructureerde revisie",
+    assure2_desc: "Niets belangrijks is afhankelijk van slechts één controleronde. Kritiek materiaal doorloopt strikte kwaliteitschecks.",
+    assure3_title: "Releasegereedheid",
+    assure3_desc: "We kijken verder dan woorden: lay-out en technische integratie worden meegenomen om stress op het laatste moment te voorkomen.",
+    output1_title: "Uitrolpakketten",
+    output1_desc: "Goedgekeurde bestanden, marktnotities en praktische richtlijnen voor een foutloze interne of externe publicatie.",
+    output2_title: "Review-klare concepten",
+    output2_desc: "Duidelijke versies zodat juridische-, product- en marketingteams direct en zonder verwarring hun akkoord kunnen geven.",
+    output3_title: "Toekomstbestendige assets",
+    output3_desc: "Content wordt opgeslagen in vertaalgeheugens, zodat toekomstige updates moeiteloos en consistent kunnen worden doorgevoerd.",
+    contact_eyebrow: "Contact LexiScale",
+    contact_title: "Vertel ons wat u nodig heeft, en wij stippelen de juiste meertalige route uit.",
+    contact_sub: "Gebruik het onderstaande formulier voor websites, apps, documenten of doorlopende ondersteuning. Een directe e-mail sturen mag natuurlijk ook.",
+    contact_email_kicker: "Eerst E-mailen",
+    contact_email_title: "Liever direct schakelen voordat we de scope bepalen?",
+    contact_email_body: "Stuur ons uw briefing, tijdlijn of proefmateriaal per e-mail. We kunnen eenvoudig beginnen en het vervolgens uitwerken tot een plan.",
+    contact_side2_title: "Flexibele projectvormen",
+    contact_side2_desc: "Losse documenten, grote meertalige lanceringen of ondersteuning voor slechts één fase van een groter programma.",
+    contact_side3_title: "Een heldere volgende stap",
+    contact_side3_desc: "Zodra we de scope begrijpen, adviseren we het beste startpunt in plaats van een 'one-size-fits-all' pakket te forceren.",
+    faq_kicker: "Voordat U Verzendt",
+    faq_title: "Enkele veelgestelde vragen.",
+    faq1_q: "Wat moet ik in mijn briefing opnemen?",
+    faq1_a: "Doeltalen, verwachte tijdlijnen en voorbeeldmateriaal zijn meer dan genoeg om te kunnen starten met een voorstel.",
+    faq2_q: "Kunnen jullie helpen als de uitrol al in volle gang is?",
+    faq2_a: "Jazeker. We kunnen instappen in een lopend project en de workflow stabiliseren, zelfs direct na een urgente en chaotische fase.",
+    faq3_q: "Kunnen meerdere marktversies na verloop van tijd synchroon blijven?",
+    faq3_a: "Absoluut. Ons systeem is specifiek gebouwd om parallelle versies gesynchroniseerd te houden, zelfs bij complexe, doorlopende updates.",
+    form_fname: "Voornaam",
+    form_lname: "Achternaam",
+    form_email: "Zakelijk E-mailadres",
+    form_service: "Gewenste Primaire Dienst",
+    form_opt_default: "Selecteer een aandachtsgebied",
+    form_opt_1: "Gecertificeerde Documentvertaling",
+    form_opt_2: "Strategische Web Lokalisatie",
+    form_opt_3: "Software & App Globalisering",
+    form_opt_4: "Multimedia Transcreatie",
+    form_opt_5: "AI-Ondersteunde MTPE",
+    form_opt_6: "Tolkdiensten op Executive Niveau",
+    form_opt_7: "Maatwerk Globaliseringsstrategie",
+    form_scope: "Projectscope & Vereisten",
+    form_submit: "Projectgegevens Verzenden",
+    form_ph_first_name: "Jan",
+    form_ph_last_name: "Smit",
+    form_ph_email: "u@bedrijf.nl",
+    form_ph_details: "Geef uw doeltalen, het geschatte volume en de gewenste tijdlijn door"
+  }
+};
+
+const storageKey = "lexiscale-language";
+
+function getSavedLanguage() {
+  try { return localStorage.getItem(storageKey) || "en"; } 
+  catch (error) { return "en"; }
+}
+
+function saveLanguage(language) {
+  try { localStorage.setItem(storageKey, language); } 
+  catch (error) {}
+}
+
+function translatePlaceholders(dict) {
+  const placeholderMap = [
+    ["input[name='First Name']", "form_ph_first_name"],
+    ["input[name='Last Name']", "form_ph_last_name"],
+    ["input[name='Email']", "form_ph_email"],
+    ["textarea[name='Project Details']", "form_ph_details"]
+  ];
+
+  placeholderMap.forEach(([selector, key]) => {
+    const field = document.querySelector(selector);
+    if (field && dict[key]) {
+      field.placeholder = dict[key];
+    }
+  });
+}
+
+function setLanguage(language) {
+  const dict = translations[language] || translations.en;
+
+  document.documentElement.lang = language;
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+    if (dict[key]) {
+      element.innerHTML = dict[key];
+    }
+  });
+
+  translatePlaceholders(dict);
+
+  document.querySelectorAll("[data-lang]").forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.lang === language);
+  });
+
+  const currentLang = document.getElementById("current-language");
+  if (currentLang) {
+    currentLang.textContent = language.toUpperCase();
+  }
+
+  const titleKey = document.body.dataset.titleKey;
+  if (titleKey && dict[titleKey]) {
+    document.title = dict[titleKey];
+  }
+
+  saveLanguage(language);
+}
+
+function updateScrollProgress() {
+  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0 ? `${(window.scrollY / scrollableHeight) * 100}%` : "0%";
+  document.documentElement.style.setProperty("--scroll-progress", progress);
+}
+
+function initRevealObserver() {
+  const reveals = document.querySelectorAll(".reveal");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reducedMotion) {
+    reveals.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.14,
+      rootMargin: "0px 0px -40px 0px"
+    }
+  );
+
+  reveals.forEach((element) => observer.observe(element));
+}
+
+function animateCounter(element) {
+  const target = Number(element.dataset.counterTarget || 0);
+  const suffix = element.dataset.counterSuffix || "";
+  const duration = 1200;
+  const startTime = performance.now();
+
+  function update(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(target * eased);
+    element.textContent = `${current}${suffix}`;
+
+    if (progress < 1) { requestAnimationFrame(update); }
+  }
+  requestAnimationFrame(update);
+}
+
+function initCounters() {
+  const counters = document.querySelectorAll("[data-counter-target]");
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    counters.forEach((counter) => {
+      counter.textContent = `${counter.dataset.counterTarget}${counter.dataset.counterSuffix || ""}`;
+    });
+    return;
+  }
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.7 });
+  counters.forEach((counter) => counterObserver.observe(counter));
+}
+
+function initLanguageMenus() {
+  const switchers = document.querySelectorAll(".lang-switcher");
+
+  // Toggle open/closed on button click — stopPropagation keeps the
+  // document click handler from immediately closing it on the same event.
+  switchers.forEach((switcher) => {
+    const toggle = switcher.querySelector(".lang-btn");
+    if (!toggle) return;
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const opening = !switcher.classList.contains("is-open");
+      // Close all others first
+      switchers.forEach((s) => s.classList.remove("is-open"));
+      if (opening) {
+        switcher.classList.add("is-open");
+        // Pin the navbar so it doesn't hide while dropdown is visible
+        window._navPinned = true;
+        const header = document.querySelector(".site-header");
+        if (header) header.classList.remove("nav-hidden");
+      } else {
+        window._navPinned = false;
+      }
+    });
+  });
+
+  // Clicking outside any switcher closes all dropdowns and unpins
+  document.addEventListener("click", (e) => {
+    const anyOpen = Array.from(switchers).some(s => s.classList.contains("is-open"));
+    if (anyOpen) {
+      const insideAny = Array.from(switchers).some(s => s.contains(e.target));
+      if (!insideAny) {
+        switchers.forEach((s) => s.classList.remove("is-open"));
+        window._navPinned = false;
+      }
+    }
+  });
+
+  // Language option selected: apply language, close dropdown, unpin
+  document.querySelectorAll("[data-lang]").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setLanguage(button.dataset.lang);
+      switchers.forEach((s) => s.classList.remove("is-open"));
+      window._navPinned = false;
+      // Mark active
+      document.querySelectorAll(".lang-option").forEach(b => b.classList.remove("is-active"));
+      document.querySelectorAll(`[data-lang="${button.dataset.lang}"]`).forEach(b => b.classList.add("is-active"));
+    });
+  });
+}
+
+function initMobileMenu() {
+  const toggle = document.querySelector(".nav-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    menu.classList.toggle("is-open", !isOpen);
+    document.body.classList.toggle("menu-open", !isOpen);
+  });
+
+  menu.querySelectorAll("a, button").forEach((item) => {
+    item.addEventListener("click", () => {
+      toggle.setAttribute("aria-expanded", "false");
+      menu.classList.remove("is-open");
+      document.body.classList.remove("menu-open");
+    });
+  });
+}
+
+function highlightCurrentPage() {
+  const currentPage = document.body.dataset.page;
+  if (!currentPage) return;
+  document.querySelectorAll(`[data-nav="${currentPage}"]`).forEach((link) => {
+    link.classList.add("is-active");
+  });
+}
+
+function setYear() {
+  document.querySelectorAll("[data-year]").forEach((element) => {
+    element.textContent = new Date().getFullYear();
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const initialLanguage = getSavedLanguage();
+  setLanguage(initialLanguage);
+  // Mark active language button
+  document.querySelectorAll(`[data-lang="${initialLanguage}"]`).forEach(b => b.classList.add("is-active"));
+  setYear();
+  highlightCurrentPage();
+  initLanguageMenus();
+  initMobileMenu();
+  initRevealObserver();
+  initCounters();
+  updateScrollProgress();
+
+  // ── Smart navbar ────────────────────────────────────
+  // Rules:
+  //  • Scroll DOWN past 80px → hide
+  //  • Scroll UP            → show + unpin
+  //  • Mouse enters header  → show + pin
+  //  • Mouse leaves header  → unpin (but only re-hide if scroll has hidden it)
+  //  • Mouse within top 72px of viewport → show (peek zone)
+  //  • _navPinned=true (dropdown open) → never hide
+  (function() {
+    const header = document.querySelector(".site-header");
+    const PEEK_PX = 72;
+    let lastY    = window.scrollY;
+    let hiddenByScroll = false;
+    let ticking  = false;
+    window._navPinned = false;
+
+    function show() { header.classList.remove("nav-hidden"); }
+    function hide() { if (!window._navPinned) header.classList.add("nav-hidden"); }
+
+    // Scroll handler
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY;
+          if (y > lastY && y > 80) {
+            hiddenByScroll = true;
+            hide();
+          } else {
+            hiddenByScroll = false;
+            window._navPinned = false;  // scroll up clears pin
+            show();
+          }
+          lastY = y;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Mouse enters the header → pin open
+    header.addEventListener("mouseenter", () => {
+      window._navPinned = true;
+      show();
+    });
+
+    // Mouse leaves the header → unpin; re-hide only if scroll had hidden it
+    header.addEventListener("mouseleave", () => {
+      // Don't unpin if a dropdown is open
+      const anyOpen = document.querySelector(".lang-switcher.is-open");
+      if (!anyOpen) {
+        window._navPinned = false;
+        if (hiddenByScroll) hide();
+      }
+    });
+
+    // Peek zone: mouse within top 72px shows nav even without hovering header
+    document.addEventListener("mousemove", (e) => {
+      if (e.clientY <= PEEK_PX) {
+        show();
+      }
+      // Do NOT re-hide here — leave that to mouseleave on header
+    }, { passive: true });
+
+    // Click anywhere on header = pin for this scroll position
+    header.addEventListener("click", () => {
+      window._navPinned = true;
+      show();
+    });
+  })();
+
+  // FAQ accordion
+  document.querySelectorAll(".faq-accordion-q").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const item = btn.closest(".faq-accordion-item");
+      const isOpen = item.classList.contains("is-open");
+      document.querySelectorAll(".faq-accordion-item.is-open").forEach(el => el.classList.remove("is-open"));
+      if (!isOpen) item.classList.add("is-open");
+    });
+  });
+
+  // Subtle tilt on cards
+  document.querySelectorAll("[data-tilt]").forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const r = card.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width  - 0.5) * 6;
+      const y = ((e.clientY - r.top)  / r.height - 0.5) * -6;
+      card.style.transform = `perspective(800px) rotateY(${x}deg) rotateX(${y}deg) translateY(-2px)`;
+      card.style.boxShadow = `0 20px 40px -12px rgba(15,23,42,0.18)`;
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+      card.style.boxShadow = "";
+    });
+  });
+
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  window.addEventListener("resize", updateScrollProgress);
+
+  requestAnimationFrame(() => {
+    document.body.classList.add("is-mounted");
+  });
+});
+  </script>
+</head>
+<body data-page="home" data-title-key="meta_home_title">
+  <div class="progress-line" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="site-nav">
+      <a href="#home" class="brand" aria-label="LexiScale home">
+        <span class="brand-mark" aria-hidden="true" style="overflow:visible;width:44px;height:44px;padding:0;background:none;border-radius:12px;box-shadow:none;">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <defs>
+              <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0ea5e9"/>
+                <stop offset="100%" stop-color="#6366f1"/>
+              </linearGradient>
+              <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#38bdf8"/>
+                <stop offset="100%" stop-color="#818cf8"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- Background pill -->
+            <rect width="44" height="44" rx="12" fill="url(#lg1)"/>
+            <!-- Animated globe rings -->
+            <circle cx="22" cy="22" r="13" stroke="rgba(255,255,255,0.18)" stroke-width="1" fill="none"/>
+            <ellipse cx="22" cy="22" rx="7" ry="13" stroke="rgba(255,255,255,0.22)" stroke-width="1" fill="none">
+              <animateTransform attributeName="transform" type="rotate" from="0 22 22" to="360 22 22" dur="6s" repeatCount="indefinite"/>
+            </ellipse>
+            <ellipse cx="22" cy="22" rx="13" ry="5" stroke="rgba(255,255,255,0.18)" stroke-width="1" fill="none"/>
+            <!-- L letterform -->
+            <path d="M15 12 L15 28 L29 28" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+              <animate attributeName="stroke-dasharray" values="0 50;50 0;50 0" dur="2s" begin="0.3s" fill="freeze"/>
+              <animate attributeName="stroke-dashoffset" values="0" dur="2s" fill="freeze"/>
+            </path>
+            <!-- Scale tick marks -->
+            <line x1="19" y1="28" x2="19" y2="31" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="22" y1="28" x2="22" y2="32" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="25" y1="28" x2="25" y2="31" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Lexi<span class="brand-scale">Scale</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+        <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+        <li><a href="#our-process" class="nav-link">Process</a></li>
+        <li><a href="#industries" class="nav-link" data-i18n="nav_industries">Industries</a></li>
+        <li><a href="#working-policy" class="nav-link">Work Policy</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn" aria-label="Select language">
+            <span id="current-language">EN</span>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="lang-menu">
+            <button type="button" class="lang-option" data-lang="en">English <span>EN</span></button>
+            <button type="button" class="lang-option" data-lang="fr">Français <span>FR</span></button>
+            <button type="button" class="lang-option" data-lang="es">Español <span>ES</span></button>
+            <button type="button" class="lang-option" data-lang="pt">Português <span>PT</span></button>
+            <button type="button" class="lang-option" data-lang="nl">Nederlands <span>NL</span></button>
+          </div>
+        </div>
+
+        <a href="#contact" class="nav-cta" data-i18n="nav_quote">Request a Quote</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-links">
+        <li><a href="#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+        <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+        <li><a href="#our-process" class="nav-link">Process</a></li>
+        <li><a href="#industries" class="nav-link" data-i18n="nav_industries">Industries</a></li>
+        <li><a href="#working-policy" class="nav-link">Work Policy</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta" data-i18n="nav_quote">Request a Quote</a>
+      <div class="mobile-lang">
+        <button type="button" class="lang-option" data-lang="en">English <span>EN</span></button>
+        <button type="button" class="lang-option" data-lang="fr">Français <span>FR</span></button>
+        <button type="button" class="lang-option" data-lang="es">Español <span>ES</span></button>
+        <button type="button" class="lang-option" data-lang="pt">Português <span>PT</span></button>
+        <button type="button" class="lang-option" data-lang="nl">Nederlands <span>NL</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero" id="home">
+      <div class="hero-shell">
+        <div class="hero-backdrop">
+          <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=60&auto=format&fit=crop">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-global-world-map-animation-business-background-22736-large.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow reveal is-visible" data-i18n="home_eyebrow">Localization for ambitious launches</div>
+            <h1 class="display reveal is-visible d-1" data-i18n="home_hero_title">Make every market feel <span class="accent">locally imagined.</span></h1>
+            <p class="reveal is-visible d-2" data-i18n="home_hero_sub">LexiScale helps brands adapt websites, apps, documents, learning content, and video so each audience receives something clear, culturally tuned, and confidently on-brand.</p>
+
+            <div class="hero-actions reveal is-visible d-3">
+              <a href="#contact" class="button button-primary" data-i18n="home_hero_primary">Request a Quote</a>
+              <a href="#services" class="button button-secondary" data-i18n="home_hero_secondary">Explore Services</a>
+            </div>
+
+            <div class="hero-metrics reveal is-visible d-3">
+              <div class="metric" data-tilt>
+                <strong data-counter-target="4" data-counter-suffix="">4</strong>
+                <span data-i18n="home_metric1_label">launch framework</span>
+              </div>
+              <div class="metric" data-tilt>
+                <strong data-counter-target="3" data-counter-suffix="x">3x</strong>
+                <span data-i18n="home_metric2_label">review layers for critical copy</span>
+              </div>
+              <div class="metric" data-tilt>
+                <strong data-counter-target="24" data-counter-suffix="h">24h</strong>
+                <span data-i18n="home_metric3_label">reply window for fresh enquiries</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-stack">
+            <article class="info-card reveal d-1" data-tilt>
+              <div class="card-kicker" data-i18n="home_panel_kicker">Program Focus</div>
+              <h2 data-i18n="home_panel_title">Brand voice, regional nuance, and the systems around them.</h2>
+              <p data-i18n="home_panel_body">We localize tone, layout, terminology, and customer journeys so market-ready launches feel designed from the start instead of added at the end.</p>
+              <div class="language-cloud">
+                <span class="language-chip" data-i18n="svc_web_title">Website Localization</span>
+                <span class="language-chip" data-i18n="svc_app_title">App and Software Localization</span>
+                <span class="language-chip" data-i18n="svc_doc_title">Document and Regulatory Translation</span>
+                <span class="language-chip" data-i18n="svc_media_title">Multimedia Transcreation</span>
+              </div>
+            </article>
+
+            <article class="info-card orbit-card reveal d-2" data-tilt>
+              <div class="card-kicker card-kicker--light" data-i18n="home_orbit_kicker">Program Rhythm</div>
+              <h3 data-i18n="home_orbit_title">Built for web, apps, documents, and media.</h3>
+              <div class="orbit-stat">
+                <strong data-i18n="home_orbit_label1">Web</strong>
+                <span data-i18n="home_orbit_stat1">Localized landing pages, product flows, and multilingual SEO planning.</span>
+              </div>
+              <div class="orbit-stat">
+                <strong data-i18n="home_orbit_label2">Apps</strong>
+                <span data-i18n="home_orbit_stat2">String management, UI expansion checks, and linguistic QA.</span>
+              </div>
+              <div class="orbit-stat">
+                <strong data-i18n="home_orbit_label3">Media</strong>
+                <span data-i18n="home_orbit_stat3">Subtitles, voice adaptation, scripts, and training content.</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="section-shell">
+        <div class="marquee reveal">
+          <div class="marquee-track">
+            <span class="marquee-chip" data-i18n="home_signal1">Website localization</span>
+            <span class="marquee-chip" data-i18n="home_signal2">App globalization</span>
+            <span class="marquee-chip" data-i18n="home_signal3">Regulatory content</span>
+            <span class="marquee-chip" data-i18n="home_signal4">Video subtitling</span>
+            <span class="marquee-chip" data-i18n="home_signal5">Learning localization</span>
+            <span class="marquee-chip" data-i18n="home_signal6">Multilingual support</span>
+            <span class="marquee-chip">eLearning Localization</span>
+            <span class="marquee-chip">Game Localization</span>
+            <span class="marquee-chip" data-i18n="home_signal1">Website localization</span>
+            <span class="marquee-chip" data-i18n="home_signal2">App globalization</span>
+            <span class="marquee-chip" data-i18n="home_signal3">Regulatory content</span>
+            <span class="marquee-chip" data-i18n="home_signal4">Video subtitling</span>
+            <span class="marquee-chip" data-i18n="home_signal5">Learning localization</span>
+            <span class="marquee-chip" data-i18n="home_signal6">Multilingual support</span>
+            <span class="marquee-chip">eLearning Localization</span>
+            <span class="marquee-chip">Game Localization</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-shell">
+        <div class="story-grid">
+          <article class="card media-gallery reveal">
+            <div class="media-gallery-grid">
+              <figure class="media-gallery-item media-gallery-item--wide">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80&auto=format&fit=crop" alt="A global team collaborating around a laptop." loading="eager">
+              </figure>
+              <figure class="media-gallery-item">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80&auto=format&fit=crop" alt="Two teammates discussing localization strategy." loading="eager">
+              </figure>
+              <figure class="media-gallery-item">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80&auto=format&fit=crop" alt="A project review meeting with notes on the table." loading="eager">
+              </figure>
+            </div>
+          </article>
+
+          <div class="story-stack">
+            <article class="card story-copy reveal d-1" data-tilt>
+              <div class="section-kicker" data-i18n="home_story_kicker">Designed for nuance</div>
+              <h2 class="section-title" data-i18n="home_story_title">Localization that feels authored in-market, not post-processed.</h2>
+              <p class="section-copy" data-i18n="home_story_body1">The strongest multilingual brands do more than translate text. They adapt rhythm, references, formatting, and user expectations until the experience reads naturally in each market.</p>
+              <p class="section-copy" data-i18n="home_story_body2">Our approach blends native-language review with practical production design, helping teams move fast without flattening their brand voice.</p>
+              <div class="check-list">
+                <div class="check-item"><span data-i18n="home_story_item1">Terminology systems shaped around your sector</span></div>
+                <div class="check-item"><span data-i18n="home_story_item2">Native review before go-live and after UI implementation</span></div>
+                <div class="check-item"><span data-i18n="home_story_item3">Creative adaptation for campaigns, learning, and multimedia</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-shell">
+        <div class="section-head section-head--stacked reveal">
+          <div class="section-kicker" data-i18n="services_stack_kicker">What We Deliver</div>
+          <h2 class="section-title" style="max-width: 26ch;" data-i18n="services_stack_title">Eight specialized service lines, one shared quality system.</h2>
+          <p class="section-copy" style="max-width: 56ch;" data-i18n="services_sub">Choose a single workstream or combine them into one operating rhythm. We keep the experience cohesive from source content to final delivery.</p>
+        </div>
+
+        <div class="stack-grid">
+          <article class="card detail-card reveal" data-tilt>
+            <span class="detail-badge">01</span>
+            <h3 data-i18n="svc_web_title">Website Localization</h3>
+            <p data-i18n="svc_web_desc">Market-tuned messaging, navigation, and multilingual SEO for landing pages, product journeys, help centers, and ecommerce paths.</p>
+          </article>
+
+          <article class="card detail-card reveal d-1" data-tilt>
+            <span class="detail-badge">02</span>
+            <h3 data-i18n="svc_app_title">App and Software Localization</h3>
+            <p data-i18n="svc_app_desc">String handling, UI expansion awareness, release-ready QA, and native-feeling product language across platforms.</p>
+          </article>
+
+          <article class="card detail-card reveal" data-tilt>
+            <span class="detail-badge">03</span>
+            <h3 data-i18n="svc_doc_title">Document and Regulatory Translation</h3>
+            <p data-i18n="svc_doc_desc">Clear, review-led delivery for business documents, contracts, SOPs, policies, training packs, and regulated content.</p>
+          </article>
+
+          <article class="card detail-card reveal d-1" data-tilt>
+            <span class="detail-badge">04</span>
+            <h3 data-i18n="svc_media_title">Multimedia Transcreation</h3>
+            <p data-i18n="svc_media_desc">Subtitles, scripts, voice direction, on-screen copy, and creative adaptation for campaigns, explainers, and learning assets.</p>
+          </article>
+
+          <article class="card detail-card reveal" data-tilt>
+            <span class="detail-badge">05</span>
+            <h3 data-i18n="svc_ai_title">AI-Assisted MTPE</h3>
+            <p data-i18n="svc_ai_desc">Efficient high-volume workflows where machine output is refined by expert reviewers to restore tone, accuracy, and consistency.</p>
+          </article>
+
+          <article class="card detail-card reveal d-1" data-tilt>
+            <span class="detail-badge">06</span>
+            <h3 data-i18n="svc_interp_title">Interpretation and Language Support</h3>
+            <p data-i18n="svc_interp_desc">Scheduled interpreting and multilingual support planning for meetings, onboarding, virtual sessions, and sensitive conversations.</p>
+          </article>
+
+          <article class="card detail-card reveal" data-tilt>
+            <span class="detail-badge">07</span>
+            <h3>eLearning End-to-End Localization</h3>
+            <p>Full-cycle adaptation of courses, modules, and assessments — from authoring tool export (Articulate, Captivate, Lectora) through SCORM/xAPI packaging, LMS deployment, voiceover recording, on-screen text, and cultural review — so learners in every market engage with content that was built for them.</p>
+          </article>
+
+          <article class="card detail-card reveal d-1" data-tilt>
+            <span class="detail-badge">08</span>
+            <h3>Game Localization</h3>
+            <p>UI strings, dialogue trees, cutscene subtitles, marketing copy, age-rating adaptation, and cultural consulting for console, PC, and mobile titles. We manage LQA alongside translation so the playable experience stays immersive across every region.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- eLearning & Game Localization spotlight -->
+    <section class="section">
+      <div class="section-shell">
+        <div class="section-head section-head--stacked reveal">
+          <div class="section-kicker">Specialized Disciplines</div>
+          <h2 class="section-title" style="max-width: 28ch;">Deep expertise where content complexity is highest.</h2>
+        </div>
+
+        <div class="story-grid">
+          <!-- eLearning -->
+          <article class="card reveal" data-tilt style="overflow:hidden;">
+            <figure style="margin:0; height:220px; overflow:hidden; background:var(--sand);">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=80&auto=format&fit=crop" alt="eLearning localization workspace" loading="eager" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </figure>
+            <div style="padding:32px;">
+              <div class="card-kicker" style="margin-bottom:16px;">eLearning End-to-End Localization</div>
+              <h3 style="font-size:1.4rem;font-weight:700;letter-spacing:-0.02em;margin:0 0 12px;">From authoring tool to LMS — every step localized.</h3>
+              <p style="font-size:1rem;line-height:1.65;color:var(--ink-soft);margin:0 0 20px;">We handle the full pipeline: exporting from Articulate Storyline, Rise, Captivate, or Lectora; translating and re-engineering all on-screen text, voiceover scripts, and closed captions; packaging to SCORM 1.2, SCORM 2004, or xAPI; and validating inside your LMS before go-live. Instructional design intent stays intact. Cultural references are updated. Every learner feels like the course was made for them.</p>
+              <div class="check-list">
+                <div class="check-item"><span>Authoring tool round-trip (Storyline, Rise, Captivate, Lectora)</span></div>
+                <div class="check-item"><span>Voiceover casting, direction, and sync</span></div>
+                <div class="check-item"><span>SCORM / xAPI packaging and LMS QA</span></div>
+                <div class="check-item"><span>Cultural adaptation of scenarios and imagery</span></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Game Localization -->
+          <article class="card reveal d-1" data-tilt style="overflow:hidden;">
+            <figure style="margin:0; height:220px; overflow:hidden; background:var(--sand);">
+              <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=900&q=80&auto=format&fit=crop" alt="Game localization and LQA" loading="eager" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </figure>
+            <div style="padding:32px;">
+              <div class="card-kicker" style="margin-bottom:16px;">Game Localization</div>
+              <h3 style="font-size:1.4rem;font-weight:700;letter-spacing:-0.02em;margin:0 0 12px;">Immersive in every language, consistent across every build.</h3>
+              <p style="font-size:1rem;line-height:1.65;color:var(--ink-soft);margin:0 0 20px;">We localize UI strings, dialogue trees, cutscene subtitles, loading-screen tips, in-game help, and store marketing copy for console, PC, and mobile titles. LQA runs alongside translation so truncation, font rendering, and regional content flags are caught before certification. Age-rating adaptation and cultural consulting cover the markets where regulatory context matters most.</p>
+              <div class="check-list">
+                <div class="check-item"><span>UI strings, dialogue, and narrative text</span></div>
+                <div class="check-item"><span>Cutscene and cinematic subtitle timing</span></div>
+                <div class="check-item"><span>Linguistic QA alongside translation</span></div>
+                <div class="check-item"><span>Age-rating and cultural consulting</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="industries">
+      <div class="section-shell">
+        <div class="section-head section-head--stacked reveal">
+          <div class="section-kicker" data-i18n="industries_sector_kicker">Where We Fit</div>
+          <h2 class="section-title" style="max-width: 28ch;" data-i18n="industries_sector_title">Localization support for regulated, product-led, and customer-facing teams.</h2>
+          <p class="section-copy" style="max-width: 56ch;" data-i18n="industries_sub">Different sectors ask for different levels of nuance. We shape the language process around your audience, approval logic, and publication pressure.</p>
+        </div>
+
+        <div class="sector-grid">
+          <article class="card sector-card reveal" data-tilt>
+            <span class="sector-index">01</span>
+            <h3 data-i18n="sector1_title">Life Sciences and Healthcare</h3>
+            <p data-i18n="sector1_desc">Patient-facing content, training materials, internal documentation, and precise terminology for sensitive communication.</p>
+          </article>
+
+          <article class="card sector-card reveal d-1" data-tilt>
+            <span class="sector-index">02</span>
+            <h3 data-i18n="sector2_title">Legal and Compliance</h3>
+            <p data-i18n="sector2_desc">Contracts, policies, disclosures, and review-heavy content that must stay clear under scrutiny.</p>
+          </article>
+
+          <article class="card sector-card reveal d-2" data-tilt>
+            <span class="sector-index">03</span>
+            <h3 data-i18n="sector3_title">Technology and SaaS</h3>
+            <p data-i18n="sector3_desc">Product interfaces, release notes, support content, onboarding journeys, and fast-moving roadmap updates.</p>
+          </article>
+
+          <article class="card sector-card reveal" data-tilt>
+            <span class="sector-index">04</span>
+            <h3 data-i18n="sector4_title">Retail and Ecommerce</h3>
+            <p data-i18n="sector4_desc">Campaign messaging, product copy, merchandising language, and multilingual customer paths that protect conversion.</p>
+          </article>
+
+          <article class="card sector-card reveal d-1" data-tilt>
+            <span class="sector-index">05</span>
+            <h3 data-i18n="sector5_title">Learning and Training</h3>
+            <p data-i18n="sector5_desc">Courses, assessments, facilitator guides, and onboarding materials that still teach well after adaptation.</p>
+          </article>
+
+          <article class="card sector-card reveal d-2" data-tilt>
+            <span class="sector-index">06</span>
+            <h3 data-i18n="sector6_title">Customer Support and Operations</h3>
+            <p data-i18n="sector6_desc">Macros, knowledge bases, chat flows, escalation content, and internal guidance for multilingual service teams.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-shell">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker" data-i18n="industries_assurance_kicker">Shared Standards</div>
+            <h2 class="section-title" data-i18n="industries_assurance_title">What stays consistent across every sector.</h2>
+          </div>
+        </div>
+
+        <div class="assurance-grid">
+          <article class="card side-card reveal" data-tilt>
+            <h3 data-i18n="assure1_title">Audience-aware tone</h3>
+            <p data-i18n="assure1_desc">Language choices reflect who is reading, what they need, and how much confidence the moment requires.</p>
+          </article>
+
+          <article class="card side-card reveal d-1" data-tilt>
+            <h3 data-i18n="assure2_title">Structured review</h3>
+            <p data-i18n="assure2_desc">Nothing important relies on a single pass. Critical material gets layered checks before it moves forward.</p>
+          </article>
+
+          <article class="card side-card reveal d-2" data-tilt>
+            <h3 data-i18n="assure3_title">Release readiness</h3>
+            <p data-i18n="assure3_desc">We look beyond wording to layout, readability, and publishable packaging so teams are not fixing issues at the last second.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-shell">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker" data-i18n="home_flow_kicker">How We Work</div>
+            <h2 class="section-title" data-i18n="home_flow_title">A clear workflow for multilingual projects with real deadlines.</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal" data-tilt>
+            <div class="timeline-step">01</div>
+            <h3 data-i18n="home_flow1_title">Align</h3>
+            <p data-i18n="home_flow1_desc">We map target markets, risk points, and the content that drives conversion or compliance.</p>
+          </article>
+
+          <article class="timeline-item reveal d-1" data-tilt>
+            <div class="timeline-step">02</div>
+            <h3 data-i18n="home_flow2_title">Adapt</h3>
+            <p data-i18n="home_flow2_desc">Copy, UI, visuals, and terminology are reworked for each audience, not just translated line by line.</p>
+          </article>
+
+          <article class="timeline-item reveal d-2" data-tilt>
+            <div class="timeline-step">03</div>
+            <h3 data-i18n="home_flow3_title">Validate</h3>
+            <p data-i18n="home_flow3_desc">Review cycles check language quality, layout behavior, and market fit before release.</p>
+          </article>
+
+          <article class="timeline-item reveal d-3" data-tilt>
+            <div class="timeline-step">04</div>
+            <h3 data-i18n="home_flow4_title">Release</h3>
+            <p data-i18n="home_flow4_desc">Final deliverables arrive structured for publishing, versioning, and future updates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW OUR TEAM WORKS -->
+    <section class="section section--tinted">
+      <div class="section-shell">
+        <div class="section-head section-head--stacked reveal">
+          <div class="section-kicker">The LexiScale Team</div>
+          <h2 class="section-title" style="max-width:30ch;">Powered by certified language professionals and trusted agency partners.</h2>
+          <p class="section-copy" style="max-width:62ch;">Every result you receive is the outcome of a carefully assembled network — vetted freelance specialists and certified localization agencies who have earned their place through demonstrated expertise, not just availability. No generalists. No guesswork. Each person or partner on your project was chosen because they already know your content type inside out.</p>
+        </div>
+
+        <!-- Certified talent banner -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;">
+          <div style="padding:32px;border-radius:var(--radius-lg);background:var(--paper-strong);border:1px solid var(--border);box-shadow:var(--shadow);display:flex;gap:20px;align-items:flex-start;" class="reveal">
+            <div style="flex-shrink:0;width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(14,165,233,.15),rgba(99,102,241,.15));border:1px solid rgba(14,165,233,.25);display:grid;place-items:center;font-size:1.4rem;">🎓</div>
+            <div>
+              <h3 style="font-size:1.05rem;font-weight:700;margin:0 0 8px;">Certified Freelance Specialists</h3>
+              <p style="font-size:0.9rem;line-height:1.65;color:var(--ink-soft);margin:0;">Our freelancer network includes ATA-certified translators, ISO-trained reviewers, SCORM-certified eLearning engineers, and LQA specialists with active platform certifications — each vetted through a multi-stage assessment before joining a single client project.</p>
+            </div>
+          </div>
+          <div style="padding:32px;border-radius:var(--radius-lg);background:var(--paper-strong);border:1px solid var(--border);box-shadow:var(--shadow);display:flex;gap:20px;align-items:flex-start;" class="reveal d-1">
+            <div style="flex-shrink:0;width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(14,165,233,.15),rgba(99,102,241,.15));border:1px solid rgba(14,165,233,.25);display:grid;place-items:center;font-size:1.4rem;">🤝</div>
+            <div>
+              <h3 style="font-size:1.05rem;font-weight:700;margin:0 0 8px;">Trusted Agency Partners</h3>
+              <p style="font-size:0.9rem;line-height:1.65;color:var(--ink-soft);margin:0;">For large-volume or highly regulated work, we collaborate with ISO 17100-aligned agency partners who have proven track records in legal, medical, and technical localization. These partnerships extend our capacity without ever lowering our standards.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card reveal" data-tilt>
+            <div class="team-icon">✍️</div>
+            <h3>Senior Translators</h3>
+            <p>Native-language professionals matched to your exact sector — legal, tech, medical, creative, or gaming — certified and assessed before every assignment.</p>
+          </div>
+          <div class="team-card reveal d-1" data-tilt>
+            <div class="team-icon">🔍</div>
+            <h3>Editors &amp; Reviewers</h3>
+            <p>Independent second-pass reviewers who check for style consistency, terminology accuracy, audience register, and brand voice alignment.</p>
+          </div>
+          <div class="team-card reveal d-2" data-tilt>
+            <div class="team-icon">🧪</div>
+            <h3>LQA Specialists</h3>
+            <p>Linguistic quality assurance engineers who validate UI behaviour, layout integrity, string lengths, and functional correctness in the live environment.</p>
+          </div>
+          <div class="team-card reveal d-1" data-tilt>
+            <div class="team-icon">⚙️</div>
+            <h3>DTP &amp; Engineers</h3>
+            <p>File engineers and desktop publishing specialists handling SCORM packaging, authoring tool round-trips, and export-ready formatting across every format.</p>
+          </div>
+          <div class="team-card reveal d-2" data-tilt>
+            <div class="team-icon">🗂️</div>
+            <h3>LexiScale Coordinators</h3>
+            <p>Our in-house delivery team owns the timeline, coordinates all contributors, and is your single point of contact from first brief to final handoff.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE PROCESS YOUR PROJECTS -->
+    <section class="section" id="our-process">
+      <div class="section-shell">
+        <div class="section-head section-head--stacked reveal">
+          <div class="section-kicker">Project Lifecycle</div>
+          <h2 class="section-title" style="max-width:28ch;">How we take your request from brief to delivery.</h2>
+          <p class="section-copy" style="max-width:58ch;">A structured intake and production process means nothing falls through the cracks — from the first email to final handoff.</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step reveal" data-tilt>
+            <h3>Brief & Intake</h3>
+            <p>You share your content, target languages, deadline, and any style or brand notes. We ask the right clarifying questions upfront so production never stops mid-run.</p>
+            <span class="process-step-tag">24h response window</span>
+          </div>
+          <div class="process-step reveal d-1" data-tilt>
+            <h3>Scoping & Quoting</h3>
+            <p>We assess word count, complexity, file formats, and technical requirements. You receive a fixed scope, timeline, and cost — no vague estimates.</p>
+            <span class="process-step-tag">Fixed-price quote</span>
+          </div>
+          <div class="process-step reveal d-2" data-tilt>
+            <h3>Kickoff & Resource Matching</h3>
+            <p>Your project manager assembles the right team: translators matched to your sector, editors aligned to your brand voice, engineers set up for your format.</p>
+            <span class="process-step-tag">Sector-matched team</span>
+          </div>
+          <div class="process-step reveal" data-tilt>
+            <h3>Translation & Adaptation</h3>
+            <p>Work proceeds in your project environment. Terminology databases and style guides are applied from the first segment. Queries are logged and resolved without pausing delivery.</p>
+            <span class="process-step-tag">CAT tools + style guides</span>
+          </div>
+          <div class="process-step reveal d-1" data-tilt>
+            <h3>Review & QA</h3>
+            <p>An independent editor reviews the full output. LQA validates layout and function. Any issues are flagged and resolved before the file leaves our environment.</p>
+            <span class="process-step-tag">3-layer review cycle</span>
+          </div>
+          <div class="process-step reveal d-2" data-tilt>
+            <h3>Delivery & Handoff</h3>
+            <p>Files arrive in your required format with QA sign-off notes. A brief post-delivery check-in confirms everything is publish-ready. Revision rounds are handled promptly.</p>
+            <span class="process-step-tag">Format-ready output</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUALITY ASSURANCE -->
+    <section class="section section--tinted">
+      <div class="section-shell">
+        <div class="section-head section-head--stacked reveal">
+          <div class="section-kicker">Quality Assurance</div>
+          <h2 class="section-title" style="max-width:26ch;">Three independent checks before anything leaves our hands.</h2>
+          <p class="section-copy" style="max-width:58ch;">Quality is not a single pass at the end. It is built into every stage and verified by a different person at each layer.</p>
+        </div>
+        <div class="qa-grid">
+          <div class="qa-card reveal" data-tilt>
+            <div class="qa-icon">🔤</div>
+            <h3>Linguistic QA</h3>
+            <p>An independent bilingual reviewer checks the full translated output against the source — not just for accuracy but for register, tone, terminology consistency, and brand voice.</p>
+            <ul class="qa-list">
+              <li>Source-vs-target accuracy review</li>
+              <li>Terminology and glossary compliance</li>
+              <li>Style guide and tone-of-voice check</li>
+              <li>Fluency and naturalness assessment</li>
+            </ul>
+          </div>
+          <div class="qa-card reveal d-1" data-tilt>
+            <div class="qa-icon">🖥️</div>
+            <h3>Technical QA</h3>
+            <p>Our LQA and engineering team validates that the content behaves correctly in its destination — whether that is a web page, an app UI, a SCORM module, or a formatted document.</p>
+            <ul class="qa-list">
+              <li>String length and UI truncation checks</li>
+              <li>Font rendering and character encoding</li>
+              <li>Layout integrity in target language</li>
+              <li>Functional testing in destination environment</li>
+            </ul>
+          </div>
+          <div class="qa-card reveal d-2" data-tilt>
+            <div class="qa-icon">🌍</div>
+            <h3>Cultural &amp; Market QA</h3>
+            <p>Beyond linguistic accuracy, we assess whether the content will land correctly for the intended audience — checking idioms, cultural references, imagery context, and regulatory suitability.</p>
+            <ul class="qa-list">
+              <li>Cultural appropriateness review</li>
+              <li>Regional idiom and reference audit</li>
+              <li>Age-rating and regulatory flag check</li>
+              <li>Market-readiness sign-off</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA SECURITY & CONFIDENTIALITY -->
+    <section class="section section--dark">
+      <div class="section-shell">
+        <div class="section-head section-head--stacked reveal">
+          <div class="section-kicker" style="color:var(--amber-soft);background:rgba(59,130,246,.15);border-color:rgba(59,130,246,.3);">Data Security</div>
+          <h2 class="section-title" style="max-width:28ch;color:var(--white);">Your content stays private, protected, and yours.</h2>
+          <p class="section-copy" style="max-width:58ch;color:rgba(255,255,255,.7);">Enterprise-grade confidentiality is standard on every project — not an add-on.</p>
+        </div>
+        <div class="security-grid">
+          <div class="security-card reveal" data-tilt>
+            <div class="security-icon">🔏</div>
+            <div>
+              <h3>NDA Before Work Begins</h3>
+              <p>A mutual non-disclosure agreement is signed before any files or briefing materials are shared. Every team member assigned to your project is also bound by confidentiality obligations.</p>
+            </div>
+          </div>
+          <div class="security-card reveal d-1" data-tilt>
+            <div class="security-icon">🔒</div>
+            <div>
+              <h3>Encrypted File Transfer</h3>
+              <p>All project files are transferred via TLS-encrypted channels. We do not use personal email or consumer file-sharing services for client materials.</p>
+            </div>
+          </div>
+          <div class="security-card reveal d-2" data-tilt>
+            <div class="security-icon">👤</div>
+            <div>
+              <h3>Access-Controlled Environments</h3>
+              <p>Project workspaces are role-based and access-limited. Translators, editors, and engineers only see the files relevant to their assignment — nothing more.</p>
+            </div>
+          </div>
+          <div class="security-card reveal d-3" data-tilt>
+            <div class="security-icon">🚫</div>
+            <div>
+              <h3>No AI Training on Client Data</h3>
+              <p>Your source content and translations are never used to train AI models. When AI tools assist with volume workflows, they operate under strict data-isolation settings.</p>
+            </div>
+          </div>
+          <div class="security-card reveal" data-tilt>
+            <div class="security-icon">🗑️</div>
+            <div>
+              <h3>Secure Retention &amp; Deletion</h3>
+              <p>Files are retained only for the agreed project period. On request or at project close, all client materials are securely deleted from our systems and confirmed in writing.</p>
+            </div>
+          </div>
+          <div class="security-card reveal d-1" data-tilt>
+            <div class="security-icon">📋</div>
+            <div>
+              <h3>GDPR-Aligned Practices</h3>
+              <p>Our processes follow GDPR principles for data minimisation, purpose limitation, and subject rights. We can provide a Data Processing Agreement for enterprise engagements on request.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKING POLICY -->
+    <section class="section section--tinted" id="working-policy">
+      <div class="section-shell">
+        <div class="section-head section-head--stacked reveal">
+          <div class="section-kicker">Working Policy</div>
+          <h2 class="section-title" style="max-width:28ch;">How and where the LexiScale team works.</h2>
+          <p class="section-copy" style="max-width:58ch;">We are a fully remote, globally distributed studio. Our work model is built around quality, flexibility, and accountability — not office hours or geography.</p>
+        </div>
+
+        <div class="policy-grid">
+          <div class="policy-card reveal" data-tilt>
+            <div class="policy-icon">&#127968;</div>
+            <h3>100% Remote</h3>
+            <p>Every member of the LexiScale network works remotely — from project coordinators to translators, LQA specialists, and DTP engineers. There is no central office. Work happens where quality is best, not where rent is cheapest.</p>
+            <ul class="policy-list">
+              <li>Fully distributed team across multiple time zones</li>
+              <li>No geographic restrictions on talent — best person for the project, always</li>
+              <li>Asynchronous-first communication with clear turnaround windows</li>
+              <li>All collaboration via secure, encrypted project environments</li>
+            </ul>
+          </div>
+
+          <div class="policy-card reveal d-1" data-tilt>
+            <div class="policy-icon">&#9200;</div>
+            <h3>Flexible Hours, Fixed Deadlines</h3>
+            <p>Contributors manage their own schedules. What is fixed is the output — delivery timelines, QA milestones, and client response windows are non-negotiable. Flexibility in how work happens; consistency in when it lands.</p>
+            <ul class="policy-list">
+              <li>24-hour response window on all new client enquiries</li>
+              <li>Delivery milestones agreed at project kickoff and honoured</li>
+              <li>Urgent turnaround available via parallel team allocation across time zones</li>
+              <li>Project coordinators available during client business hours</li>
+            </ul>
+          </div>
+
+          <div class="policy-card reveal" data-tilt>
+            <div class="policy-icon">&#128274;</div>
+            <h3>Secure Remote Infrastructure</h3>
+            <p>Remote does not mean insecure. All project work happens in access-controlled, role-limited environments. File transfer is TLS-encrypted. Client data never touches personal email or consumer cloud storage.</p>
+            <ul class="policy-list">
+              <li>TLS-encrypted file transfer on all projects</li>
+              <li>Role-based access — contributors see only their assigned scope</li>
+              <li>NDA signed before any files or briefing materials are shared</li>
+              <li>GDPR-aligned data handling; DPAs available on request</li>
+            </ul>
+          </div>
+
+          <div class="policy-card reveal d-1" data-tilt>
+            <div class="policy-icon">&#127760;</div>
+            <h3>Global Coverage, Timezone-Aware</h3>
+            <p>Our distributed model means we can cover projects that span multiple markets and time zones without delay. A project starting in Europe can have review completed in Asia before the client's morning standup.</p>
+            <ul class="policy-list">
+              <li>Active contributors across Europe, Asia, the Americas, and MENA</li>
+              <li>Multi-timezone coordination built into large-volume project scheduling</li>
+              <li>Language-specific teams assembled from the region closest to the target market</li>
+              <li>No single point of failure — redundancy built into every project team</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="policy-highlight reveal">
+          <p>We believe the best localization work comes from people who actually live in the markets they localize for. Remote is not a compromise — it is the strategy that makes native quality at global scale possible.</p>
+          <a href="#contact">Work With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-shell">
+        <div class="contact-layout">
+          <div class="contact-side">
+            <div class="section-head section-head--stacked reveal">
+              <div class="section-kicker" data-i18n="contact_eyebrow">Contact LexiScale</div>
+              <h2 class="section-title" data-i18n="contact_title">Tell us what you need, and we will shape the right multilingual path.</h2>
+              <p class="section-copy" data-i18n="contact_sub">Use the form below for websites, apps, documents, media, or ongoing localization support. If email is easier, write directly and we will take it from there.</p>
+            </div>
+
+            <article class="info-card email-card reveal d-1" data-tilt>
+              <div class="card-kicker card-kicker--light" data-i18n="contact_email_kicker">Email First</div>
+              <h2 data-i18n="contact_email_title">Prefer a direct message before you scope the project?</h2>
+              <p data-i18n="contact_email_body">Send your brief, timeline, or sample material by email. We can start with a lightweight conversation and turn it into a clearer plan.</p>
+              <a href="mailto:info@lexiscale.com" class="email-link">info@lexiscale.com</a>
+            </article>
+          </div>
+
+          <div class="contact-form-shell">
+            <form action="https://formspree.io/f/xjgjyqbn" method="POST" class="contact-form reveal d-2">
+              <div class="form-row">
+                <div class="form-group">
+                  <label data-i18n="form_fname">First Name</label>
+                  <input type="text" name="First Name" placeholder="John" required>
+                </div>
+                <div class="form-group">
+                  <label data-i18n="form_lname">Last Name</label>
+                  <input type="text" name="Last Name" placeholder="Smith" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_email">Corporate Email</label>
+                <input type="email" name="Email" placeholder="you@company.com" required>
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_service">Primary Service Required</label>
+                <select name="Service">
+                  <option value="" data-i18n="form_opt_default">Select an area of focus</option>
+                  <option value="Document Translation" data-i18n="form_opt_1">Certified Document Translation</option>
+                  <option value="Website Localization" data-i18n="form_opt_2">Strategic Web Localization</option>
+                  <option value="Software / App Localization" data-i18n="form_opt_3">Software / App Globalization</option>
+                  <option value="Multimedia Localization" data-i18n="form_opt_4">Multimedia Transcreation</option>
+                  <option value="eLearning Localization">eLearning End-to-End Localization</option>
+                  <option value="Game Localization">Game Localization &amp; LQA</option>
+                  <option value="AI-Assisted Translation" data-i18n="form_opt_5">AI-Augmented MTPE</option>
+                  <option value="Interpretation Services" data-i18n="form_opt_6">Executive Interpretation</option>
+                  <option value="Other" data-i18n="form_opt_7">Custom Global Strategy</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_scope">Project Scope & Requirements</label>
+                <textarea name="Project Details" placeholder="Outline your target languages, estimated volume, and timeline" required></textarea>
+              </div>
+              <button type="submit" class="form-submit" data-i18n="form_submit">Submit Project Details</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY LEXISCALE -->
+    <section class="section section--tinted">
+      <div class="section-shell">
+        <div class="section-head section-head--stacked reveal">
+          <div class="section-kicker">Why LexiScale</div>
+          <h2 class="section-title" style="max-width:26ch;">What makes the difference when markets matter.</h2>
+        </div>
+        <div class="pillar-grid">
+          <div class="pillar-card reveal" data-tilt>
+            <span class="pillar-icon">🎯</span>
+            <h3>Sector-Matched Teams</h3>
+            <p>Every project is staffed with specialists who already know your industry's terminology, regulatory context, and audience expectations — not generalists learning on the job.</p>
+          </div>
+          <div class="pillar-card reveal d-1" data-tilt>
+            <span class="pillar-icon">⚡</span>
+            <h3>Fixed Scope, Real Deadlines</h3>
+            <p>You get a confirmed timeline and fixed cost before work begins. No vague estimates, no surprise scope creep — just a clear commitment and a team built to honour it.</p>
+          </div>
+          <div class="pillar-card reveal d-2" data-tilt>
+            <span class="pillar-icon">🔁</span>
+            <h3>Built to Scale With You</h3>
+            <p>Whether you need a single landing page or a rolling 12-language release calendar, the same process and quality bar applies. Volume does not mean lower standards here.</p>
+          </div>
+          <div class="pillar-card reveal d-3" data-tilt>
+            <span class="pillar-icon">🤝</span>
+            <h3>One Contact, Full Accountability</h3>
+            <p>Your project manager coordinates everything — translators, reviewers, engineers, and client feedback — so you never have to chase multiple people for a single answer.</p>
+          </div>
+        </div>
+
+        <div class="trust-bar reveal" style="margin-top:48px;">
+          <div class="trust-stat">
+            <strong>8</strong>
+            <span>Service lines</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-stat">
+            <strong>125+</strong>
+            <span>Languages supported</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-stat">
+            <strong>3×</strong>
+            <span>Review layers on critical copy</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-stat">
+            <strong>24h</strong>
+            <span>Response on new enquiries</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-stat">
+            <strong>100%</strong>
+            <span>NDA coverage on every project</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPANDED FAQ ACCORDION -->
+    <section class="section">
+      <div class="section-shell">
+        <div class="section-head section-head--stacked reveal">
+          <div class="section-kicker" data-i18n="faq_kicker">Before You Send</div>
+          <h2 class="section-title" data-i18n="faq_title">A few common questions.</h2>
+        </div>
+
+        <div class="faq-accordion reveal">
+          <div class="faq-accordion-item is-open">
+            <button class="faq-accordion-q">
+              What should I include in my brief?
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-accordion-a">
+              <p>Target languages, your deadline, links or sample files, and any notes about audience tone or brand voice are enough to get started. We will ask the right clarifying questions in the intake call so nothing stalls production mid-run.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-q">
+              How do you handle very tight deadlines?
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-accordion-a">
+              <p>Tight deadlines are quoted honestly — we tell you what is achievable without cutting quality corners. For urgent projects we can allocate parallel teams across time zones to compress turnaround without bypassing review cycles.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-q">
+              Can you step into a live project that is already in motion?
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-accordion-a">
+              <p>Yes. We can join an active rollout, support a single release cycle, or take over from a previous vendor. We do a quick audit of existing assets first so terminology and style stay consistent from the point we take over.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-q">
+              How do you keep multiple market versions aligned over time?
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-accordion-a">
+              <p>We maintain translation memories and terminology databases per client. When source content is updated, only the changed segments need to be re-translated, which keeps parallel market versions in sync and reduces cost on repeat projects.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-q">
+              How do you protect my content and data?
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-accordion-a">
+              <p>An NDA is signed before any materials are shared. All files are transferred via encrypted channels, project access is role-limited, and your content is never used to train AI models. We can provide a formal Data Processing Agreement for enterprise engagements on request.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-q">
+              Do you work with eLearning authoring tools and game engines?
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-accordion-a">
+              <p>Yes. For eLearning we handle round-trip workflows in Articulate Storyline, Rise, Adobe Captivate, and Lectora, including SCORM/xAPI packaging and LMS validation. For games we work directly with string files, dialogue scripts, and cutscene subtitle formats, and run LQA alongside translation in the target build.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="band reveal">
+          <h2 data-i18n="home_band_title">One partner for content, code, and culture.</h2>
+          <p data-i18n="home_band_body">From a single landing page to a multilingual release calendar, we build programs that stay elegant as volume grows.</p>
+          <div class="band-actions">
+            <a href="#contact" class="button button-primary" data-i18n="common_plan_launch">Plan Your Launch</a>
+            <a href="mailto:info@lexiscale.com" class="button button-secondary" data-i18n="common_contact_team">Contact LexiScale</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-shell">
+      <div class="footer-grid" style="grid-template-columns: 2fr 1fr 1fr 1fr;">
+        <div>
+          <a href="#home" class="brand" aria-label="LexiScale home" style="display:inline-flex;align-items:center;gap:12px;">
+            <span style="display:inline-block;width:36px;height:36px;flex-shrink:0;">
+              <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="44" rx="12" fill="url(#lg1)"/>
+                <circle cx="22" cy="22" r="13" stroke="rgba(255,255,255,0.18)" stroke-width="1" fill="none"/>
+                <ellipse cx="22" cy="22" rx="7" ry="13" stroke="rgba(255,255,255,0.22)" stroke-width="1" fill="none"/>
+                <ellipse cx="22" cy="22" rx="13" ry="5" stroke="rgba(255,255,255,0.18)" stroke-width="1" fill="none"/>
+                <path d="M15 12 L15 28 L29 28" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="19" y1="28" x2="19" y2="31" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="22" y1="28" x2="22" y2="32" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="25" y1="28" x2="25" y2="31" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="brand-name" style="color: var(--white);">Lexi<span style="background:linear-gradient(135deg,var(--teal),var(--amber-soft));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Scale</span></span>
+          </a>
+          <p class="footer-copy" data-i18n="footer_tagline">LexiScale shapes multilingual experiences for teams that need nuance, pace, and control.</p>
+        </div>
+
+        <div>
+          <p class="footer-heading" data-i18n="footer_quick_links">Quick Links</p>
+          <div class="footer-links">
+            <a href="#home" data-i18n="nav_home">Home</a>
+            <a href="#services" data-i18n="nav_services">Services</a>
+            <a href="#our-process">Process</a>
+            <a href="#industries" data-i18n="nav_industries">Industries</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer-heading" data-i18n="footer_service_label">Focus Areas</p>
+          <div class="footer-links">
+            <a href="#services" data-i18n="footer_service1">Website localization</a>
+            <a href="#services" data-i18n="footer_service2">App localization</a>
+            <a href="#services" data-i18n="footer_service3">Documents and compliance</a>
+            <a href="#services" data-i18n="footer_service4">Media and learning</a>
+            <a href="#services">eLearning localization</a>
+            <a href="#services">Game localization</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer-heading">Standards</p>
+          <div class="footer-links">
+            <a href="#our-process">How we work</a>
+            <a href="#our-process">Quality assurance</a>
+            <a href="#our-process">Data security</a>
+            <a href="#working-policy">Working policy</a>
+            <a href="#contact">Request a quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span data-year></span> LexiScale. <span data-i18n="footer_copy">Built for borderless communication.</span></span>
+        <span><span data-i18n="footer_email_label">Email</span>: <a class="footer-links" style="color: rgba(255, 255, 255, 0.8);" href="mailto:info@lexiscale.com">info@lexiscale.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
