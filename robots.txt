@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://lexiscale.github.io/sitemap.xml
+
+# Block crawling of any admin or form handler paths
+Disallow: /admin/
+Disallow: /formspree/
